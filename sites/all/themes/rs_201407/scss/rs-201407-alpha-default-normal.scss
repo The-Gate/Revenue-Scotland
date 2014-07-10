@@ -1,0 +1,28 @@
+/* This file will hold styles that are loaded using the same media query as the normal grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
+@import 'base';
+$grid-1:60px;
+$grid-2:140px;
+$grid-3:220px;
+$grid-4:300px;
+$grid-5:380px;
+$grid-6:460px;
+$grid-7:540px;
+$grid-8:620px;
+$grid-9:700px;
+$grid-10:780px;
+$grid-11:860px;
+$grid-12:940px;
+
+.page {font-size:$basefont !important;}
+
+/* footer */
+.zone-footer{
+  li{
+    width:$grid-3;
+  }
+  li:nth-child(1n+3){
+       width:$grid-2;
+  }
+}

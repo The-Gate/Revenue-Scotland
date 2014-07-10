@@ -1,0 +1,24 @@
+/* This file will hold styles that are loaded using the same media query as the wide grid. */
+@import 'base';
+$grid-1:80px;
+$grid-2:180px;
+$grid-3:280px;
+$grid-4:380px;
+$grid-5:480px;
+$grid-6:580px;
+$grid-7:680px;
+$grid-8:780px;
+$grid-9:880px;
+$grid-10:980px;
+$grid-11:1080px;
+$grid-12:1180px;
+
+/* footer */
+.zone-footer{
+  li{
+    width:$grid-3;
+  }
+  li:nth-child(1n+3){
+       width:$grid-2;
+  }
+}

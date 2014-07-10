@@ -1,0 +1,27 @@
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the normal and widescreen layouts. You may override these styles in the normal 
+ *  and widescreen CSS files as appropriate. */
+@import 'base';
+$grid-1:40px;
+$grid-2:100px;
+$grid-3:160px;
+$grid-4:220px;
+$grid-5:280px;
+$grid-6:340px;
+$grid-7:400px;
+$grid-8:460px;
+$grid-9:520px;
+$grid-10:580px;
+$grid-11:640px;
+$grid-12:700px;
+
+/* footer */
+.zone-footer{
+  li{
+    width:$grid-3;
+  }
+  li:nth-child(1n+3){
+       width:$grid-2;
+  }
+}
