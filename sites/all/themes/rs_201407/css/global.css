@@ -1,1 +1,59 @@
-.page{font-size:17px !important}.page *{font-family:"Raleway",Verdana,Helvetica,Arial,sans-serif !important}ul li.leaf{list-style-image:none;list-style-type:none}li.expanded,li.collapsed,li.leaf{padding:0}.zone-footer{background:#525252;font-size:0.889em;padding:30px 0 80px}.zone-footer ul.menu li{display:inline-block;vertical-align:top;margin:0 16px 0 0}.zone-footer ul.menu li:nth-child(1n+3){margin:0}.zone-footer p,.zone-footer li a,.zone-footer li a:active{color:#fff;text-decoration:none;font-weight:700}
+/* This file will hold styles for the mobile version of your website (mobile first). */
+/* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+/* font sizes */
+/* 16px - default */
+/* 40px - default */
+/* 22px - default */
+/* image path*/
+/* colours */
+/* eg footer BG */
+/* eg homepage central blue bg */
+/* eg homepage top more blue link */
+/* eg home top right block */
+/* eg homepage bottom section */
+/* variables */
+/* fonts */
+/* font size */
+h1 { font-size: 2.222em; }
+
+h2 { font-size: 1.389em; }
+
+/* main page settings */
+.page { font-size: 17px !important; line-height: 1.2; }
+
+.page * { font-family: "Raleway", Verdana, Helvetica, Arial, sans-serif !important; }
+
+/* menu */
+ul li.leaf { list-style-image: none; list-style-type: none; }
+
+li.expanded, li.collapsed, li.leaf { padding: 0; }
+
+/* links */
+a:link, a:visited { text-decoration: none; }
+
+/* home */
+.front .zone-preface-wrapper { background: url("/sites/all/themes/rs_201407/images/main-content-blue-top-home.png") #006aaf no-repeat 50% 0; padding-top: 180px; }
+
+.front .zone-preface .region .block-inner { background: url("/sites/all/themes/rs_201407/images/white-block-blue-bg-footer-wedge.png") 0 100% no-repeat white; padding-bottom: 20px; background-size: 100% 20px; margin-bottom: 20px; }
+
+.front .zone-preface .region .block-inner .content, .front .block-block-5 .content { padding-top: 20px; }
+.front .zone-preface .region .block-inner .content > *, .front .block-block-5 .content > * { padding: 0 20px 0 15px; }
+
+.front .zone-preface .region .block-block-2 .content { background: url("/sites/all/themes/rs_201407/images/block-top-flash-1.png") 100% 0 no-repeat; }
+.front .zone-preface .region .block-block-3 .content { background: url("/sites/all/themes/rs_201407/images/block-top-flash-2.png") 100% 0 no-repeat; }
+.front .zone-preface .region .block-block-4 .content { background: url("/sites/all/themes/rs_201407/images/block-top-flash-3.png") 100% 0 no-repeat; }
+
+.front .zone-content-wrapper { padding-top: 100px; background: url("/sites/all/themes/rs_201407/images/main-content-blue-bottom-home.png") no-repeat 50% 0; }
+
+.front .zone-content { background: #f0e9f8; }
+
+.front .field-name-body a { display: inline-block; background: url("/sites/all/themes/rs_201407/images/blue-on-white-arrow-right.png") #224096 100% 50% no-repeat; padding: 0 55px 0 20px; line-height: 46px; color: #fff; font-weight: 700; }
+
+.front .block-block-5 { background: url("/sites/all/themes/rs_201407/images/arrow-dark-lilac-on-white-down.png") #a77bd4 50% 100% no-repeat; background-size: 100% 21px; padding-bottom: 21px; }
+.front .block-block-5 h2 { color: #fff; border-bottom: 11px solid #fff; display: inline-block; padding-right: 0 !important; }
+
+/* footer */
+.zone-footer { background: url("/sites/all/themes/rs_201407/images/footer.png") #525252 0 100% no-repeat; background-size: 100% auto; font-size: 0.889em; padding: 30px 0 170px; }
+.zone-footer ul.menu li { display: inline-block; vertical-align: top; margin: 0 16px 0 0; }
+.zone-footer ul.menu li:nth-child(1n+3) { margin: 0; }
+.zone-footer p, .zone-footer li a, .zone-footer li a:active { color: #fff; text-decoration: none; font-weight: 700; }

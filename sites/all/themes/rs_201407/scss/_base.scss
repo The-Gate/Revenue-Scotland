@@ -1,4 +1,19 @@
 /* font sizes */
 $basefont:18px;
 $reducedfont:17px;
-$font16:0.889em; /* 16px */
+$font16:0.889em; /* 16px - default */
+$fontH1:2.222em; /* 40px - default */
+$fontH2:1.389em;/* 22px - default */
+
+/* image path*/
+$imgRoot:/sites/all/themes/rs_201407/images;
+
+/* colours */
+$darkGrey: #525252; /* eg footer BG */
+$black: #111;
+$midBlue:#006aaf; /* eg homepage central blue bg */
+$darkBlue:#224096; /* eg homepage top more blue link */
+$darkLilac:#a77bd4; /* eg home top right block */
+$lilac:#f0e9f8; /* eg homepage bottom section */
+
+$contentBlockPadding: 0 20px 0 15px;
