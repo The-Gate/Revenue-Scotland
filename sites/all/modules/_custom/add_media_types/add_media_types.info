@@ -1,0 +1,5 @@
+name = Add Media Display Types
+description = Adds additional options to the media plug in. Need to update the module to add a type per image style setting.
+package = ACC Custom
+core = 7.x
+php = 5.2

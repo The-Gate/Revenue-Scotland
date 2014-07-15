@@ -1,0 +1,5 @@
+name = Sub Menu Items
+description = Lists the child menu items - title & teaser content
+package = Revenue Scotland
+core = 7.x
+php = 5.2

@@ -1,0 +1,8 @@
+<?php
+/**
+ * Implements hook_entity_info_alter().
+ */
+function add_media_types_entity_info_alter(&$entity_info) {
+  // Support the media module
+  $entity_info['file']['view modes']['media_responsive_1'] = array('label' => t('3rd Width'), 'custom settings' => TRUE);
+}

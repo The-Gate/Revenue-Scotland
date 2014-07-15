@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * Implements hook_field_attach_presave().
+ */
+function media_misc_field_attach_presave($entity_type, $entity) {
+  if ($entity_type == 'node') {
+    foreach (field_info_fields() as $field_name => $field) {
+      if ($field['type'] == 'image' && isset($entity->{$field_name})) {
+        $langcode = field_is_translatable($entity_type, $field) ? entity_language($entity_type, $entity) : LANGUAGE_NONE;
+        if (!empty($entity->{$field_name}[$langcode])) {
+          foreach ($entity->{$field_name}[$langcode] as $delta => $item) {
+            $file = file_load($entity->{$field_name}[$langcode][$delta]['fid']);
+            $alt_items = field_get_items('file', $file, 'field_file_image_alt_text');
+            $title_items = field_get_items('file', $file, 'field_file_image_title_text');
+            if (!($alt_items[0]['value'])) {
+              $entity->{$field_name}[$langcode][$delta]['alt'] = $alt_items[0]['value'];
+            }
+            elseif (empty($entity->{$field_name}[$langcode][$delta]['alt'])) {
+              $entity->{$field_name}[$langcode][$delta]['alt'] = '';
+            }
+            if (!empty($title_items[0]['value'])) {
+              $entity->{$field_name}[$langcode][$delta]['title'] = $title_items[0]['value'];
+            }
+            elseif (empty($entity->{$field_name}[$langcode][$delta]['title'])) {
+              $entity->{$field_name}[$langcode][$delta]['title'] = '';
+            }
+          }
+        }
+      }
+    }
+  }
+}

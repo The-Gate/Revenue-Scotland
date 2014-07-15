@@ -1,0 +1,90 @@
+<?php
+
+$sub_menu_item_depth = 0;
+
+// get menu link children of current page. Assumes current page's path only exists in one menu
+function _get_menu_children() {
+
+  global $sub_menu_item_depth;
+  $children = array();
+  $current = db_query("select menu_name, mlid from {menu_links} where link_path = :node", array(':node' => $_GET['q']));
+  $current_info = array();
+  foreach ($current as $value) {
+    $current_info[] = $value;
+  }
+  if ($current_info) {
+    $result = db_query("select mlid, plid, link_path, link_title, depth from {menu_links} where menu_name=:menu and plid=:mlid and hidden=0 order by weight, link_title", array(':menu' => $current_info[0]->menu_name, ':mlid' => $current_info[0]->mlid));
+    foreach ($result as $row) {
+      $children[] = $row;
+      $sub_menu_item_depth = $row->depth;
+    }
+  }
+  return $children;
+}
+
+// get node IDs of child pages (based on menu children)
+function _get_menu_children_nids() {
+  $nids = array();
+  $children = _get_menu_children();
+  foreach ($children as $value) {
+    if (substr($value->link_path, 0, 5) == 'node/') {
+      $nids[] = substr($value->link_path, 5);
+    }
+  }
+  return $nids;
+}
+
+function _get_menu_children_data() {
+  global $sub_menu_item_depth;
+  $output = '';
+  $nid_array = array();
+  $nid_array = _get_menu_children_nids();
+  if (!empty($nid_array) and count($nid_array) > 0) {
+    $child_items = node_load_multiple($nid_array);
+    switch ($sub_menu_item_depth) {
+      case 2:
+      case 3:
+        $class = "grid-4 depth-".$sub_menu_item_depth;
+        break;
+      case 4:
+        $class = "grid-12 depth-".$sub_menu_item_depth;
+        break;
+      default:
+        $class = "depth-".$sub_menu_item_depth;
+        break;
+    }
+    foreach ($child_items as $depth => $item) {
+      $description = !(empty($item->body['und'][0]['summary'])) ? $item->body['und'][0]['summary'] : $item->body['und'][0]['safe_value'];
+      $output .= '<div class="' . $class . '">';
+      $output .= '<div class="field-title"><h2><a href="/' . drupal_get_path_alias('node/' . $item->nid) . '">' . $item->title . '</a></h2></div>';
+      $output .= '<div class="views-field views-field-description"><div class="field-content">' . $description . '</div></div>';
+      $output .= '</div>';
+    }
+  }
+  return $output;
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function sub_menu_items_block_info() {
+  $blocks = array();
+  $blocks['sub_menu_listing'] = array(
+    'info' => t('Sub Menu with Teaser Listings'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function sub_menu_items_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+    case 'sub_menu_listing':
+      $block['content'] = _get_menu_children_data();
+      break;
+  }
+  return $block;
+}

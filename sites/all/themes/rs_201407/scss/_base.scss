@@ -3,17 +3,43 @@ $basefont:18px;
 $reducedfont:17px;
 $font16:0.889em; /* 16px - default */
 $fontH1:2.222em; /* 40px - default */
-$fontH2:1.389em;/* 22px - default */
+$fontH2-22:1.222em;/* 22px - default */
+$fontH2-25:1.389em;/* 25px - default */
+$fontIntro:1.278em;/* 23px - default */
 
 /* image path*/
 $imgRoot:/sites/all/themes/rs_201407/images;
 
 /* colours */
 $darkGrey: #525252; /* eg footer BG */
+$lightGrey: #ebebeb; /* eg top menu border */
 $black: #111;
 $midBlue:#006aaf; /* eg homepage central blue bg */
 $darkBlue:#224096; /* eg homepage top more blue link */
 $darkLilac:#a77bd4; /* eg home top right block */
+$midLilac:#dac9ee; /*eg home page postscript title underline */
 $lilac:#f0e9f8; /* eg homepage bottom section */
+$darkRed: #a93023; /* land & building tax */
+$lightRed: #f2e0de; /* land & building tax */
+$lightGreen: #e0f2f4; /* landfill tax */
 
 $contentBlockPadding: 0 20px 0 15px;
+
+/* mixins */
+
+@mixin  zone-content-background($img,$bordercolour) {
+  padding-bottom:95px;
+  background: url('#{$imgRoot}/#{$img}') 50% 100% no-repeat;
+  border-bottom:30px solid $bordercolour;
+  background-size:100% 65px;  
+}
+
+
+@mixin  partial-title-border($bordercolour) {
+      height:10px;
+      background:$bordercolour;
+      width:95px;
+      display:block;
+      margin-top:15px;
+      content:""
+}

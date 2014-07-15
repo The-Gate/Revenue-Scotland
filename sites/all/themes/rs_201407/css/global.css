@@ -4,22 +4,30 @@
 /* 16px - default */
 /* 40px - default */
 /* 22px - default */
+/* 25px - default */
+/* 23px - default */
 /* image path*/
 /* colours */
 /* eg footer BG */
+/* eg top menu border */
 /* eg homepage central blue bg */
 /* eg homepage top more blue link */
 /* eg home top right block */
+/*eg home page postscript title underline */
 /* eg homepage bottom section */
+/* land & building tax */
+/* land & building tax */
+/* landfill tax */
+/* mixins */
 /* variables */
 /* fonts */
 /* font size */
 h1 { font-size: 2.222em; }
 
-h2 { font-size: 1.389em; }
+h2 { font-size: 1.222em; }
 
 /* main page settings */
-.page { font-size: 17px !important; line-height: 1.2; }
+.page { font-size: 17px !important; line-height: 1.2; margin-top: 12px; }
 
 .page * { font-family: "Raleway", Verdana, Helvetica, Arial, sans-serif !important; }
 
@@ -31,29 +39,78 @@ li.expanded, li.collapsed, li.leaf { padding: 0; }
 /* links */
 a:link, a:visited { text-decoration: none; }
 
-/* home */
-.front .zone-preface-wrapper { background: url("/sites/all/themes/rs_201407/images/main-content-blue-top-home.png") #006aaf no-repeat 50% 0; padding-top: 180px; }
+/* menu */
+/* top menu */
+.region-user-first { margin-bottom: 45px; }
+.region-user-first ul { text-align: right; }
+.region-user-first ul li.leaf { display: inline-block; font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-weight: 700; border-right: #ebebeb solid 4px; }
+.region-user-first ul li.leaf a { color: #000; padding: 5px 21px; }
 
+/* main menu */
+/* breadcumbs */
+#breadcrumb { margin-top: 20px; }
+
+.breadcrumb { font-size: 0.889em; color: #111111; }
+.breadcrumb li:after { content: ' >'; display: inline; }
+.breadcrumb li.last:after { content: ''; }
+.breadcrumb a:link, .breadcrumb a:visited { color: #111111; }
+
+/* home specific */
+.front .zone-preface-wrapper { background: url("/sites/all/themes/rs_201407/images/mc-blue-top-home.png") #006aaf no-repeat 50% 0; padding-top: 180px; }
 .front .zone-preface .region .block-inner { background: url("/sites/all/themes/rs_201407/images/white-block-blue-bg-footer-wedge.png") 0 100% no-repeat white; padding-bottom: 20px; background-size: 100% 20px; margin-bottom: 20px; }
-
 .front .zone-preface .region .block-inner .content, .front .block-block-5 .content { padding-top: 20px; }
 .front .zone-preface .region .block-inner .content > *, .front .block-block-5 .content > * { padding: 0 20px 0 15px; }
-
 .front .zone-preface .region .block-block-2 .content { background: url("/sites/all/themes/rs_201407/images/block-top-flash-1.png") 100% 0 no-repeat; }
 .front .zone-preface .region .block-block-3 .content { background: url("/sites/all/themes/rs_201407/images/block-top-flash-2.png") 100% 0 no-repeat; }
 .front .zone-preface .region .block-block-4 .content { background: url("/sites/all/themes/rs_201407/images/block-top-flash-3.png") 100% 0 no-repeat; }
-
-.front .zone-content-wrapper { padding-top: 100px; background: url("/sites/all/themes/rs_201407/images/main-content-blue-bottom-home.png") no-repeat 50% 0; }
-
-.front .zone-content { background: #f0e9f8; }
-
-.front .field-name-body a { display: inline-block; background: url("/sites/all/themes/rs_201407/images/blue-on-white-arrow-right.png") #224096 100% 50% no-repeat; padding: 0 55px 0 20px; line-height: 46px; color: #fff; font-weight: 700; }
-
+.front .zone-content-wrapper { padding-top: 100px; background: url("/sites/all/themes/rs_201407/images/mc-blue-bottom-home.png") no-repeat 50% 0; }
+.front .zone-content-wrapper #page-title { display: none; }
+.front .zone-content, .front .zone-postscript { background: #f0e9f8; }
+.front .zone-postscript { padding-bottom: 40px; }
+.front .zone-postscript .region .block h2 { border-bottom: 10px solid #dac9ee; min-height: 2.5em; }
+.front .field-name-body a, .front .zone-postscript .region .block a { display: inline-block; color: #fff; font-weight: 700; }
+.front .field-name-body a { background: url("/sites/all/themes/rs_201407/images/blue-on-white-arrow-right.png") #224096 100% 50% no-repeat; padding: 0 55px 0 20px; line-height: 46px; }
+.front .zone-postscript .region .block .content a { background: url("/sites/all/themes/rs_201407/images/blue-on-lilac-arrow-right.png") #224096 100% 50% no-repeat; padding: 0 49px 0 17px; line-height: 39px; }
 .front .block-block-5 { background: url("/sites/all/themes/rs_201407/images/arrow-dark-lilac-on-white-down.png") #a77bd4 50% 100% no-repeat; background-size: 100% 21px; padding-bottom: 21px; }
 .front .block-block-5 h2 { color: #fff; border-bottom: 11px solid #fff; display: inline-block; padding-right: 0 !important; }
 
+.context-land-buildings-transaction-tax, .context-scottish-landfill-tax { /* faq more box below categories */ }
+.context-land-buildings-transaction-tax .region-preface-second, .context-scottish-landfill-tax .region-preface-second { margin: 0; }
+.context-land-buildings-transaction-tax .region-preface-second .block-delta-blocks-page-title, .context-scottish-landfill-tax .region-preface-second .block-delta-blocks-page-title { margin-left: 110px; }
+.context-land-buildings-transaction-tax .region-preface-second .block-delta-blocks-page-title:after, .context-scottish-landfill-tax .region-preface-second .block-delta-blocks-page-title:after { height: 10px; background: #fff; width: 110px; display: block; margin: 0 0 0 -110px; content: ""; }
+.context-land-buildings-transaction-tax h1, .context-scottish-landfill-tax h1 { margin-bottom: 12px; }
+.context-land-buildings-transaction-tax .block-field-introduction, .context-scottish-landfill-tax .block-field-introduction { margin: 0 0 0 110px; font-size: 1.278em; }
+.context-land-buildings-transaction-tax .block-sub-menu-items .depth-2, .context-land-buildings-transaction-tax .block-sub-menu-items .depth-3 h2, .context-scottish-landfill-tax .block-sub-menu-items .depth-2, .context-scottish-landfill-tax .block-sub-menu-items .depth-3 h2 { padding-bottom: 15px; }
+.context-land-buildings-transaction-tax .block-sub-menu-items h2, .context-scottish-landfill-tax .block-sub-menu-items h2 { font-size: 1.389em; }
+.context-land-buildings-transaction-tax .block-sub-menu-items h2 a, .context-scottish-landfill-tax .block-sub-menu-items h2 a { color: #000; }
+.context-land-buildings-transaction-tax .zone-content-wrapper .region-postscript-first .region-inner .block, .context-scottish-landfill-tax .zone-content-wrapper .region-postscript-first .region-inner .block { padding: 17px 28px; }
+.context-land-buildings-transaction-tax .zone-content-wrapper .region-postscript-first .region-inner .block a, .context-scottish-landfill-tax .zone-content-wrapper .region-postscript-first .region-inner .block a { color: #111111; }
+
+/* Land & Building Transaction Tax  */
+.context-land-buildings-transaction-tax { /* faq more box below categories */ }
+.context-land-buildings-transaction-tax .zone-preface-wrapper { padding-top: 45px; border-top: #a93023 35px solid; background: url("/sites/all/themes/rs_201407/images/mc-r-t.png") 50% 0 no-repeat; }
+.context-land-buildings-transaction-tax .zone-preface { padding-bottom: 40px; background: url("/sites/all/themes/rs_201407/images/mc-r-tb.png") 50% 100% no-repeat #f2e0de; background-size: 100% 40px; }
+.context-land-buildings-transaction-tax .zone-content { padding-bottom: 95px; background: url("/sites/all/themes/rs_201407/images/mc-r-bb.png") 50% 100% no-repeat; border-bottom: 30px solid #f2e0de; background-size: 100% 65px; }
+.context-land-buildings-transaction-tax .block-sub-menu-items .depth-2 h2, .context-land-buildings-transaction-tax .block-sub-menu-items .depth-3 h2 { border-bottom: 10px solid #f2e0de; }
+.context-land-buildings-transaction-tax .block-sub-menu-items .depth-4 h2:after { height: 10px; background: #f2e0de; width: 95px; display: block; margin-top: 15px; content: ""; }
+.context-land-buildings-transaction-tax .zone-content-wrapper .region-postscript-first { padding-bottom: 20px; background: url("/sites/all/themes/rs_201407/images/mc-r-tb.png") 50% 100% no-repeat #f2e0de; }
+
+/* scottish landfill tax */
+.context-scottish-landfill-tax { /* faq more box below categories */ }
+.context-scottish-landfill-tax .zone-preface-wrapper { padding-top: 80px; background: url("/sites/all/themes/rs_201407/images/mc-g-t.png") 50% 0 no-repeat; }
+.context-scottish-landfill-tax .zone-preface { padding-bottom: 40px; background: url("/sites/all/themes/rs_201407/images/mc-g-tb.png") 50% 100% no-repeat #e0f2f4; background-size: 100% 40px; }
+.context-scottish-landfill-tax .block-sub-menu-items .depth-2 h2, .context-scottish-landfill-tax .block-sub-menu-items .depth-3 h2 { border-bottom: 10px solid #e0f2f4; }
+.context-scottish-landfill-tax .block-sub-menu-items .depth-4 h2:after { height: 10px; background: #e0f2f4; width: 95px; display: block; margin-top: 15px; content: ""; }
+.context-scottish-landfill-tax .zone-content { padding-bottom: 95px; background: url("/sites/all/themes/rs_201407/images/mc-g-bb.png") 50% 100% no-repeat; border-bottom: 30px solid #e0f2f4; background-size: 100% 65px; }
+.context-scottish-landfill-tax .zone-content-wrapper .region-postscript-first { padding-bottom: 20px; background: url("/sites/all/themes/rs_201407/images/mc-g-tb.png") 50% 100% no-repeat #e0f2f4; }
+
+/* faq */
+.block-sub-menu-items .grid-4 { margin-bottom: 60px; }
+.block-sub-menu-items .grid-4:nth-child(3n+1) { margin-left: 0; }
+.block-sub-menu-items .grid-4:nth-child(3n+3) { margin-right: 0; }
+
 /* footer */
-.zone-footer { background: url("/sites/all/themes/rs_201407/images/footer.png") #525252 0 100% no-repeat; background-size: 100% auto; font-size: 0.889em; padding: 30px 0 170px; }
-.zone-footer ul.menu li { display: inline-block; vertical-align: top; margin: 0 16px 0 0; }
+.zone-footer { background: url("/sites/all/themes/rs_201407/images/footer.png") #525252 0 100% no-repeat; background-size: 100% auto; font-size: 0.889em; padding: 30px 0 170px; margin-bottom: 20px; }
+.zone-footer ul.menu li { display: inline-block; vertical-align: top; margin: 0 15px 0 0; }
 .zone-footer ul.menu li:nth-child(1n+3) { margin: 0; }
 .zone-footer p, .zone-footer li a, .zone-footer li a:active { color: #fff; text-decoration: none; font-weight: 700; }

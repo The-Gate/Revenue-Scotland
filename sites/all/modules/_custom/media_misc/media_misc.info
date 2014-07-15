@@ -1,0 +1,7 @@
+name = Media Misc
+description = Media module not always saving alt / title tags correctly, this should fix.
+package = Media
+core = 7.x
+version = 7.0.1
+
+dependencies[] = media
