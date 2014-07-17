@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_block_view_alter().
+ */
+function sub_menu_items_block_view_alter(&$data, $block) {
+  switch ($block->delta) {
+    case 'client-block-26':
+      drupal_add_js(drupal_get_path('module', 'helpful_info_form') . '/helpful_form.js');
+      break;
+  }
+}

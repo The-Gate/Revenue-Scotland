@@ -26,6 +26,7 @@ li.expanded, li.collapsed, li.leaf{
 /* links */
 a:link, a:visited{
   text-decoration: none;
+  color:$black;
 }
 /* menu */
 /* top menu */
@@ -189,6 +190,7 @@ a:link, a:visited{
     padding-top:45px;
     border-top:$darkRed 35px solid;
     background: url('#{$imgRoot}/mc-r-t.png') 50% 0 no-repeat;
+    margin-bottom:50px;
   }
   .zone-preface{
     padding-bottom:40px;
@@ -206,12 +208,14 @@ a:link, a:visited{
     padding-bottom:20px;
     background: url('#{$imgRoot}/mc-r-tb.png') 50% 100% no-repeat $lightRed;  
   }
-}
+  /* addition info */
+  .block-info-boxes{ @include more-info-boxes('mc-r-tb.png',$lightRed,'more-r.gif');}}
 /* scottish landfill tax */
 .context-scottish-landfill-tax {
   .zone-preface-wrapper{
     padding-top:80px;
     background: url('#{$imgRoot}/mc-g-t.png') 50% 0 no-repeat;
+    margin-bottom:50px;
   }
   .zone-preface{
     padding-bottom:40px;
@@ -229,8 +233,10 @@ a:link, a:visited{
     padding-bottom:20px;
     background: url('#{$imgRoot}/mc-g-tb.png') 50% 100% no-repeat $lightGreen;  
   }
+  /* addition info */
+  .block-info-boxes{@include more-info-boxes('mc-g-tb.png',$lightGreen,'more-g.gif');}
 }
-/* faq */
+/* category grid listing */
 .block-sub-menu-items{
   .grid-4{
     margin-bottom:60px;
@@ -242,7 +248,86 @@ a:link, a:visited{
     margin-right:0;
   }
 }
+/* site wide specific fields */
+/* last update */
+.field-name-field-last-update{
+  margin-bottom:20px;
+  .field-label{
+    font-weight:400;
+  }
+}
+/* useful info form */
+.block-webform-client-block-26 {
+  background: $lightBlue;
+  padding:12px 25px 0 ;
+  .webform-component-radios{ 
+    margin-top:0;
+    & > label{
+      line-height:46px;
+      background: url('#{$imgRoot}/icon-form-closed.gif') 100% 50% no-repeat;
+      width:100%;
+      &.open{
+        background: url('#{$imgRoot}/icon-form-open.gif') 100% 50% no-repeat;
+      }
+    }
+  }
+  .webform-component-textarea > label,.webform-component-radios > label{
+    font-size:$fontH2-22;      
+  }
+  .hide{
+    display:none;
+  }
+  .form-type-radio > *{
+    display:inline-block;
+    vertical-align: top;
+  }
+  #foo:checked::before,
+    input[type="radio"] {
+    position:absolute;
+    clip: rect(0,0,0,0);
+    clip: rect(0 0 0 0);
+    top:10px;
+  }
+  input[type="radio"] + label{
+    line-height:28px;
+    text-transform: capitalize;
+  }
+  #foo:checked,
+    input[type="radio"] + label::before {
+    content: url('#{$imgRoot}/radio-off.gif');
+    margin-right:10px;
+  }
+  input[type="radio"]:checked + label::before {
+    content: url('#{$imgRoot}/radio-on.gif');
+    margin-right:10px;
+  }
+  .form-actions.form-wrapper{
+    text-align: right;
+  }
+  button, input[type="reset"], input[type="submit"], input[type="button"]{
+    -webkit-appearance: none;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background: #0049b9;
+    border: 1px solid;
+    border-color: #4d80ce #000 #000 #4d80ce;
+    cursor: pointer;
+    color: #FFF;
+    text-shadow: none;
+  }
 
+}
+#messages.helpful_frm{
+  font-weight:700;
+  .messages{
+    background:none;
+    border:none;
+    border-left:5px solid $lightBlue;
+    padding: 0 15px;
+    margin: 15px 25px;
+  }
+}
 /* footer */
 .zone-footer{
   background: url('#{$imgRoot}/footer.png') $darkGrey 0 100% no-repeat;

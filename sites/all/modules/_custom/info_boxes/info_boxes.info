@@ -1,0 +1,5 @@
+name = Info Boxes
+description = Provides a block with a link to the menu parent and a list of menu parent siblings marked as sticky
+package = Revenue Scotland
+core = 7.x
+php = 5.2

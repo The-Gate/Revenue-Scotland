@@ -1,0 +1,89 @@
+<?php
+
+$current_info = array();
+
+// get menu link children of current page. Assumes current page's path only exists in one menu
+function _get_menu_items() {
+  global $current_info;
+  $children = array();
+  $current = db_query("select menu_name,plid, mlid from {menu_links} where link_path = :node", array(':node' => $_GET['q']));
+  foreach ($current as $value) {
+    $current_info[] = $value;
+  }
+  if ($current_info) {
+    $result = db_query("select mlid, plid, link_path, link_title, depth from {menu_links} where menu_name=:menu and plid=:plid and mlid!=:mlid and hidden=0 order by weight, link_title;", array(':menu' => $current_info[0]->menu_name, ':mlid' => $current_info[0]->mlid, ':plid' => $current_info[0]->plid));
+    foreach ($result as $row) {
+      $children[] = $row;
+    }
+  }
+  return $children;
+}
+
+// get node IDs of child pages (based on menu children)
+function _get_menu_nids() {
+  $nids = array();
+  $children = _get_menu_items();
+  foreach ($children as $value) {
+    if (substr($value->link_path, 0, 5) == 'node/') {
+      $nids[] = substr($value->link_path, 5);
+    }
+  }
+  return $nids;
+}
+
+function _get_parent_information() {
+  global $current_info;
+  $parent = array();
+  $result = db_query("select link_path, link_title from {menu_links} where menu_name=:menu and mlid=:mlid and hidden=0 order by weight, link_title;", array(':menu' => $current_info[0]->menu_name, ':mlid' => $current_info[0]->plid));
+  $parent = $result->fetchObject();
+  return $parent;
+}
+
+function _get_menu_parent_data() {
+  $output = '';
+  $nid_array = array();
+  $nid_array = _get_menu_nids();
+  if (!empty($nid_array) and count($nid_array) > 0) {
+    $parent_info = _get_parent_information();
+    $child_items = array_splice(node_load_multiple($nid_array, array('sticky' => 1)), 0, 5);
+    if (!empty($child_items)) {
+      if (!empty($parent_info)) {
+        $output .= '<div class="block-title-wrapper"><h2 class="block-title">' . $parent_info->link_title . '</h2></div>';
+      }
+      $output .= '<div class="field-items">';
+      foreach ($child_items as $depth => $item) {
+        $output .= '<div class="field-item"><a href="/' . drupal_get_path_alias('node/' . $item->nid) . '">' . $item->title . '</a></div>';
+      }
+      $output .= '</div>';
+      if (!empty($parent_info)) {
+        $output .= '<div class="view-more"><a href="/' . drupal_get_path_alias($parent_info->link_path) . '">View More</a></div>';
+      }
+    }
+  }
+  return $output;
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function info_boxes_block_info() {
+  $blocks = array();
+  $blocks['info_boxes_listing'] = array(
+    'info' => t('Info Boxes: Lists parent sticky siblings, link to parent.'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function info_boxes_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+    case 'info_boxes_listing':
+      $block['content'] = _get_menu_parent_data();
+      break;
+  }
+  return $block;
+}

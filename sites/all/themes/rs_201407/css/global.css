@@ -11,7 +11,9 @@
 /* eg footer BG */
 /* eg top menu border */
 /* eg homepage central blue bg */
+/* helpful form button */
 /* eg homepage top more blue link */
+/* useful info form bg */
 /* eg home top right block */
 /*eg home page postscript title underline */
 /* eg homepage bottom section */
@@ -37,7 +39,7 @@ ul li.leaf { list-style-image: none; list-style-type: none; }
 li.expanded, li.collapsed, li.leaf { padding: 0; }
 
 /* links */
-a:link, a:visited { text-decoration: none; }
+a:link, a:visited { text-decoration: none; color: #111111; }
 
 /* menu */
 /* top menu */
@@ -87,27 +89,60 @@ a:link, a:visited { text-decoration: none; }
 .context-land-buildings-transaction-tax .zone-content-wrapper .region-postscript-first .region-inner .block a, .context-scottish-landfill-tax .zone-content-wrapper .region-postscript-first .region-inner .block a { color: #111111; }
 
 /* Land & Building Transaction Tax  */
-.context-land-buildings-transaction-tax { /* faq more box below categories */ }
-.context-land-buildings-transaction-tax .zone-preface-wrapper { padding-top: 45px; border-top: #a93023 35px solid; background: url("/sites/all/themes/rs_201407/images/mc-r-t.png") 50% 0 no-repeat; }
+.context-land-buildings-transaction-tax { /* faq more box below categories */ /* addition info */ }
+.context-land-buildings-transaction-tax .zone-preface-wrapper { padding-top: 45px; border-top: #a93023 35px solid; background: url("/sites/all/themes/rs_201407/images/mc-r-t.png") 50% 0 no-repeat; margin-bottom: 50px; }
 .context-land-buildings-transaction-tax .zone-preface { padding-bottom: 40px; background: url("/sites/all/themes/rs_201407/images/mc-r-tb.png") 50% 100% no-repeat #f2e0de; background-size: 100% 40px; }
 .context-land-buildings-transaction-tax .zone-content { padding-bottom: 95px; background: url("/sites/all/themes/rs_201407/images/mc-r-bb.png") 50% 100% no-repeat; border-bottom: 30px solid #f2e0de; background-size: 100% 65px; }
 .context-land-buildings-transaction-tax .block-sub-menu-items .depth-2 h2, .context-land-buildings-transaction-tax .block-sub-menu-items .depth-3 h2 { border-bottom: 10px solid #f2e0de; }
 .context-land-buildings-transaction-tax .block-sub-menu-items .depth-4 h2:after { height: 10px; background: #f2e0de; width: 95px; display: block; margin-top: 15px; content: ""; }
 .context-land-buildings-transaction-tax .zone-content-wrapper .region-postscript-first { padding-bottom: 20px; background: url("/sites/all/themes/rs_201407/images/mc-r-tb.png") 50% 100% no-repeat #f2e0de; }
+.context-land-buildings-transaction-tax .block-info-boxes .block-title-wrapper { padding: 20px 20px 30px; background: url("/sites/all/themes/rs_201407/images/mc-r-tb.png") 50% 100% no-repeat #f2e0de; background-size: 100% 20px; }
+.context-land-buildings-transaction-tax .block-info-boxes .block-title-wrapper h2 { font-size: 1.389em; }
+.context-land-buildings-transaction-tax .block-info-boxes .field-items { padding: 0 5px; }
+.context-land-buildings-transaction-tax .block-info-boxes .field-items .field-item { margin-top: 10px; }
+.context-land-buildings-transaction-tax .block-info-boxes .view-more { margin-top: 25px; padding-right: 22px; text-align: right; font-weight: 700; font-size: 0.889em; line-height: 31px; background: url("/sites/all/themes/rs_201407/images/more-r.gif") 100% 50% no-repeat; }
 
 /* scottish landfill tax */
-.context-scottish-landfill-tax { /* faq more box below categories */ }
-.context-scottish-landfill-tax .zone-preface-wrapper { padding-top: 80px; background: url("/sites/all/themes/rs_201407/images/mc-g-t.png") 50% 0 no-repeat; }
+.context-scottish-landfill-tax { /* faq more box below categories */ /* addition info */ }
+.context-scottish-landfill-tax .zone-preface-wrapper { padding-top: 80px; background: url("/sites/all/themes/rs_201407/images/mc-g-t.png") 50% 0 no-repeat; margin-bottom: 50px; }
 .context-scottish-landfill-tax .zone-preface { padding-bottom: 40px; background: url("/sites/all/themes/rs_201407/images/mc-g-tb.png") 50% 100% no-repeat #e0f2f4; background-size: 100% 40px; }
 .context-scottish-landfill-tax .block-sub-menu-items .depth-2 h2, .context-scottish-landfill-tax .block-sub-menu-items .depth-3 h2 { border-bottom: 10px solid #e0f2f4; }
 .context-scottish-landfill-tax .block-sub-menu-items .depth-4 h2:after { height: 10px; background: #e0f2f4; width: 95px; display: block; margin-top: 15px; content: ""; }
 .context-scottish-landfill-tax .zone-content { padding-bottom: 95px; background: url("/sites/all/themes/rs_201407/images/mc-g-bb.png") 50% 100% no-repeat; border-bottom: 30px solid #e0f2f4; background-size: 100% 65px; }
 .context-scottish-landfill-tax .zone-content-wrapper .region-postscript-first { padding-bottom: 20px; background: url("/sites/all/themes/rs_201407/images/mc-g-tb.png") 50% 100% no-repeat #e0f2f4; }
+.context-scottish-landfill-tax .block-info-boxes .block-title-wrapper { padding: 20px 20px 30px; background: url("/sites/all/themes/rs_201407/images/mc-g-tb.png") 50% 100% no-repeat #e0f2f4; background-size: 100% 20px; }
+.context-scottish-landfill-tax .block-info-boxes .block-title-wrapper h2 { font-size: 1.389em; }
+.context-scottish-landfill-tax .block-info-boxes .field-items { padding: 0 5px; }
+.context-scottish-landfill-tax .block-info-boxes .field-items .field-item { margin-top: 10px; }
+.context-scottish-landfill-tax .block-info-boxes .view-more { margin-top: 25px; padding-right: 22px; text-align: right; font-weight: 700; font-size: 0.889em; line-height: 31px; background: url("/sites/all/themes/rs_201407/images/more-g.gif") 100% 50% no-repeat; }
 
-/* faq */
+/* category grid listing */
 .block-sub-menu-items .grid-4 { margin-bottom: 60px; }
 .block-sub-menu-items .grid-4:nth-child(3n+1) { margin-left: 0; }
 .block-sub-menu-items .grid-4:nth-child(3n+3) { margin-right: 0; }
+
+/* site wide specific fields */
+/* last update */
+.field-name-field-last-update { margin-bottom: 20px; }
+.field-name-field-last-update .field-label { font-weight: 400; }
+
+/* useful info form */
+.block-webform-client-block-26 { background: #d4e4f3; padding: 12px 25px 0; }
+.block-webform-client-block-26 .webform-component-radios { margin-top: 0; }
+.block-webform-client-block-26 .webform-component-radios > label { line-height: 46px; background: url("/sites/all/themes/rs_201407/images/icon-form-closed.gif") 100% 50% no-repeat; width: 100%; }
+.block-webform-client-block-26 .webform-component-radios > label.open { background: url("/sites/all/themes/rs_201407/images/icon-form-open.gif") 100% 50% no-repeat; }
+.block-webform-client-block-26 .webform-component-textarea > label, .block-webform-client-block-26 .webform-component-radios > label { font-size: 1.222em; }
+.block-webform-client-block-26 .hide { display: none; }
+.block-webform-client-block-26 .form-type-radio > * { display: inline-block; vertical-align: top; }
+.block-webform-client-block-26 #foo:checked::before, .block-webform-client-block-26 input[type="radio"] { position: absolute; clip: rect(0, 0, 0, 0); clip: rect(0 0 0 0); top: 10px; }
+.block-webform-client-block-26 input[type="radio"] + label { line-height: 28px; text-transform: capitalize; }
+.block-webform-client-block-26 #foo:checked, .block-webform-client-block-26 input[type="radio"] + label::before { content: url("/sites/all/themes/rs_201407/images/radio-off.gif"); margin-right: 10px; }
+.block-webform-client-block-26 input[type="radio"]:checked + label::before { content: url("/sites/all/themes/rs_201407/images/radio-on.gif"); margin-right: 10px; }
+.block-webform-client-block-26 .form-actions.form-wrapper { text-align: right; }
+.block-webform-client-block-26 button, .block-webform-client-block-26 input[type="reset"], .block-webform-client-block-26 input[type="submit"], .block-webform-client-block-26 input[type="button"] { -webkit-appearance: none; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; background: #0049b9; border: 1px solid; border-color: #4d80ce #000 #000 #4d80ce; cursor: pointer; color: #FFF; text-shadow: none; }
+
+#messages.helpful_frm { font-weight: 700; }
+#messages.helpful_frm .messages { background: none; border: none; border-left: 5px solid #d4e4f3; padding: 0 15px; margin: 15px 25px; }
 
 /* footer */
 .zone-footer { background: url("/sites/all/themes/rs_201407/images/footer.png") #525252 0 100% no-repeat; background-size: 100% auto; font-size: 0.889em; padding: 30px 0 170px; margin-bottom: 20px; }

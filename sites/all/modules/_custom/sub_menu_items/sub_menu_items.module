@@ -54,7 +54,11 @@ function _get_menu_children_data() {
         break;
     }
     foreach ($child_items as $depth => $item) {
+      if (isset($item->body['und'])){
       $description = !(empty($item->body['und'][0]['summary'])) ? $item->body['und'][0]['summary'] : $item->body['und'][0]['safe_value'];
+      } else {
+        $description = '';
+      }
       $output .= '<div class="' . $class . '">';
       $output .= '<div class="field-title"><h2><a href="/' . drupal_get_path_alias('node/' . $item->nid) . '">' . $item->title . '</a></h2></div>';
       $output .= '<div class="views-field views-field-description"><div class="field-content">' . $description . '</div></div>';

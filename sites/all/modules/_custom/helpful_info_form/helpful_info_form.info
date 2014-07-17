@@ -1,0 +1,5 @@
+name = Helpful info form
+description = adds JQery to prodivde the opening & closing fucntion and to move the form messages to the correct place
+package = Revenue Scotland
+core = 7.x
+php = 5.2
