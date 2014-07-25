@@ -28,8 +28,6 @@ function rs_201407_preprocess_html(&$vars) {
 //    'weight' => 100
 //  ));
 
-
-
   $prefixes = array();
   $namespaces = explode("\n", trim($vars['rdf_namespaces']));
   foreach ($namespaces as $name) {

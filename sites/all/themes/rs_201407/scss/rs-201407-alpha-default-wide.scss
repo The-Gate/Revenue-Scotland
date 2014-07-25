@@ -18,7 +18,7 @@ $grid-12:1180px;
   li{
     width:$grid-3;
   }
-  li:nth-child(1n+3){
+  li:nth-child(3n){
        width:$grid-2;
   }
 }
@@ -27,4 +27,25 @@ $grid-12:1180px;
 }
 #messages.helpful_frm{
  width:$grid-5;
+}
+.view-id-events{
+  .views-label{
+    width:$grid-2;
+  }
+  .field-content{
+    width:$grid-4;
+  }
+}
+.blog-home{
+  .zone-preface-wrapper{
+    .field-name-field-introduction{
+    width:$grid-8;
+    }
+  }
+}
+.field-name-field-file-upload .field-item{
+  display:inline-block;
+  margin:0 16px 0 0;
+  width:33%;
+  width:calc((100% - 60px) / 3);
 }

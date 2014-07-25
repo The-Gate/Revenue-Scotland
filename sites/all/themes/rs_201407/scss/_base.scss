@@ -1,8 +1,13 @@
 /* font sizes */
 $basefont:18px;
 $reducedfont:17px;
+$font14:0.778em; /* 14px - default */
 $font16:0.889em; /* 16px - default */
-$fontH1:2.222em; /* 40px - default */
+$font30: 1.667em; /* 30px - default */
+$font31: 1.722em; /* 31px - default */
+$fontH1-front:2.222em; /* 40px - default */
+$fontH1:2.500em; /* 45px - default */
+$fontH1-blog-header:2.667em; /* 48px - default */
 $fontH2-22:1.222em;/* 22px - default */
 $fontH2-25:1.389em;/* 25px - default */
 $fontIntro:1.278em;/* 23px - default */
@@ -10,22 +15,28 @@ $fontIntro:1.278em;/* 23px - default */
 /* image path*/
 $imgRoot:/sites/all/themes/rs_201407/images;
 
-/* colours */
-$darkGrey: #525252; /* eg footer BG */
-$lightGrey: #ebebeb; /* eg top menu border */
-$black: #111;
-$midBlue:#006aaf; /* eg homepage central blue bg */
-$darkerBlue:#0049b9; /* helpful form button */
-$darkBlue:#224096; /* eg homepage top more blue link */
-$lightBlue:#d4e4f3; /* useful info form bg */
-$darkLilac:#a77bd4; /* eg home top right block */
-$midLilac:#dac9ee; /*eg home page postscript title underline */
-$lilac:#f0e9f8; /* eg homepage bottom section */
-$darkRed: #a93023; /* land & building tax */
-$lightRed: #f2e0de; /* land & building tax */
-$lightGreen: #e0f2f4; /* landfill tax */
+/* colours... hmmm not sure about the variable names! :( */
+$colour-grey-dark: #525252; /* eg footer BG */
+$colour-grey-light: #ebebeb; /* eg top menu border */
+$colour-black-almost: #111;
+$colour-blue-mid:#006aaf; /* eg homepage central blue bg */
+$colour-blue-darker:#0049b9; /* helpful form button */
+$colour-blue-dark:#224096; /* eg homepage top more blue link */
+$colour-blue-light-1:#d4e4f3; /* useful info form bg */
+$colour-blue-light-2:#dee3ef; /* general content BG */
+$colour-blue-dark-blog:#0069af; /* blog header */
+$colour-blue-dark-blog-more:#0036a0; /* blog more link BG*/
+$colour-blue-light-blog:#b8d1e3; /* blog footer */
+$colour-blue-dark-link:#1a54a6; /* downalod file link */
+$colour-lilac-dark:#a77bd4; /* eg home top right block */
+$colour-lilac-mid:#dac9ee; /*eg home page postscript title underline */
+$colour-lilac:#f0e9f8; /* eg homepage bottom section */
+$colour-purple:#8e68ad; /* eg news listings title underlines */
+$colour-red-dark: #a93023; /* land & building tax */
+$colour-red-light: #f2e0de; /* land & building tax */
+$colour-green-light: #e0f2f4; /* landfill tax */
 
-$contentBlockPadding: 0 20px 0 15px;
+$padding-contentBlock: 0 20px 0 15px;
 
 /* mixins */
 
@@ -35,16 +46,19 @@ $contentBlockPadding: 0 20px 0 15px;
   border-bottom:30px solid $bordercolour;
   background-size:100% 65px;  
 }
-@mixin  partial-title-border($bordercolour) {
-  height:10px;
+@mixin  partial-title-border($bordercolour,$margin-top:15px,$borderThickness:10px) {
+  height:$borderThickness;
   background:$bordercolour;
   width:95px;
   display:block;
-  margin-top:15px;
+  margin-top:$margin-top;
   content:""
 }
 
-@mixin  more-info-boxes($bg-img,$bg-colour,$arrow) {
+@mixin  more-info-boxes($bg-img,$bg-colour,$arrow,$bgColour:transparent,$linkColour:$colour-black-almost,$lineHeight:31px) {
+  .view-footer{
+    text-align:right;
+  }
   .block-title-wrapper{
     padding:20px 20px 30px;
     background: url('#{$imgRoot}/#{$bg-img}') 50% 100% no-repeat $bg-colour;   
@@ -60,12 +74,24 @@ $contentBlockPadding: 0 20px 0 15px;
     }
   }
   .view-more{
+    display:inline-block;
     margin-top:25px;
-    padding-right:22px;
+    padding:0 22px 0 10px;
     text-align:right;
     font-weight: 700;
     font-size:$font16;
-    line-height:31px;
-    background: url('#{$imgRoot}/#{$arrow}') 100% 50% no-repeat;   
+    line-height:$lineHeight;
+    background: url('#{$imgRoot}/#{$arrow}') 100% 50% no-repeat $bgColour;   
+    a{
+      color:$linkColour;
+    }
   }
+}
+
+@mixin read-more(){
+  padding-right:22px;
+  font-weight: 700;
+  font-size:$font16;
+  line-height:31px;
+  background: url('#{$imgRoot}/more-p.gif') 100% 50% no-repeat;   
 }
