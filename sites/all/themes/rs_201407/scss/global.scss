@@ -448,6 +448,7 @@ a:link, a:visited{
     display:none;
   }
 } 
+/* file upload */
 .field-name-field-file-upload{ 
   margin-bottom: 20px;
   .field-item{
@@ -463,6 +464,10 @@ a:link, a:visited{
       background: url('#{$imgRoot}/icon-download.gif') 0 50% no-repeat;
     }
   }
+}
+/* field colledtions */
+.field-collection-view{
+  margin:0 0 50px;
 }
 /* useful info form */
 .block-webform-client-block-26 {
