@@ -216,6 +216,15 @@ a:link, a:visited{
   }
   /* addition info */
   .block-info-boxes{ @include more-info-boxes('mc-r-tb.png',$colour-red-light,'more-r.gif');}
+  
+  /* tech manuals */
+  .field-collection-view{
+    .field-name-field-title{
+      h2:after{
+        @include partial-title-border($colour-red-light,5px,5px);
+      }
+    }
+  }
 }
 /* scottish landfill tax */
 .context-scottish-landfill-tax {
@@ -242,6 +251,15 @@ a:link, a:visited{
   }
   /* addition info */
   .block-info-boxes{@include more-info-boxes('mc-g-tb.png',$colour-green-light,'more-g.gif');}
+  
+  /* tech manuals */
+  .field-collection-view{
+    .field-name-field-title{
+      h2:after{
+        @include partial-title-border($colour-green-light,5px,5px);
+      }
+    }
+  }
 }
 /* general content */
 .context-who-we-are,.context-legislation,.context-news,.context-help,.context-compliance-dispute-resolution,.default-theme{
@@ -268,6 +286,14 @@ a:link, a:visited{
   }
   /* addition info */
   .block-info-boxes{ @include more-info-boxes('mc-b-tb.png',$colour-blue-light-2,'more-b.gif');}
+  /* tech manuals */
+  .field-collection-view{
+    .field-name-field-title{
+      h2:after{
+        @include partial-title-border($colour-blue-dark-link,5px,5px);
+      }
+    }
+  }
 }
 
 .modified-theme {
@@ -465,10 +491,15 @@ a:link, a:visited{
     }
   }
 }
-/* field colledtions */
-.field-collection-view{
-  margin:0 0 50px;
+/* field collections */
+.field-collection-container {
+  border-bottom: 0;
+  margin-bottom: 0;
+  .field-collection-view{
+    margin:0 0 50px;
+  }
 }
+
 /* useful info form */
 .block-webform-client-block-26 {
   background: $colour-blue-light-1;

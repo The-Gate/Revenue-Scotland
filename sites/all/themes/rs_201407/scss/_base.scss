@@ -13,7 +13,7 @@ $fontH2-25:1.389em;/* 25px - default */
 $fontIntro:1.278em;/* 23px - default */
 
 /* image path*/
-$imgRoot:/sites/all/themes/rs_201407/images;
+$imgRoot:'/sites/all/themes/rs_201407/images';
 
 /* colours... hmmm not sure about the variable names! :( */
 $colour-grey-dark: #525252; /* eg footer BG */
@@ -27,7 +27,7 @@ $colour-blue-light-2:#dee3ef; /* general content BG */
 $colour-blue-dark-blog:#0069af; /* blog header */
 $colour-blue-dark-blog-more:#0036a0; /* blog more link BG*/
 $colour-blue-light-blog:#b8d1e3; /* blog footer */
-$colour-blue-dark-link:#1a54a6; /* downalod file link */
+$colour-blue-dark-link:#1a54a6; /* download file link */
 $colour-lilac-dark:#a77bd4; /* eg home top right block */
 $colour-lilac-mid:#dac9ee; /*eg home page postscript title underline */
 $colour-lilac:#f0e9f8; /* eg homepage bottom section */

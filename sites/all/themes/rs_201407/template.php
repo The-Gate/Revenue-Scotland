@@ -44,3 +44,31 @@ function rs_201407_preprocess_html(&$vars) {
   $vars['rdf']->namespaces = ' xmlns="http://www.w3.org/1999/xhtml" prefix="' . $prefix . '"';
   $vars['rdf']->profile = '';
 }
+/**
+ * theme_field()
+ * 
+ * theme the publications / tech manual to wrap the title in the field collection in <h2>
+ * 
+ * @param type $variables
+ * @return string
+ */
+function rs_201407_field__field_title__field_publication($variables) {
+  $output = '';
+  // Render the label, if it's not hidden.
+  if (!$variables['label_hidden']) {
+    $output .= '<div class="field-label"' . $variables['title_attributes'] . '>' . $variables['label'] . ':&nbsp;</div>';
+  }
+
+  // Render the items.
+  $output .= '<div class="field-items"' . $variables['content_attributes'] . '>';
+  foreach ($variables['items'] as $delta => $item) {
+    $classes = 'field-item ' . ($delta % 2 ? 'odd' : 'even');
+    $output .= '<div class="' . $classes . '"' . $variables['item_attributes'][$delta] . '><h2>' . drupal_render($item) . '</h2></div>';
+  }
+  $output .= '</div>';
+
+  // Render the top-level DIV.
+  $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
+
+  return $output;
+}
