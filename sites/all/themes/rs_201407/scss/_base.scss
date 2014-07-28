@@ -5,12 +5,14 @@ $font14:0.778em; /* 14px - default */
 $font16:0.889em; /* 16px - default */
 $font30: 1.667em; /* 30px - default */
 $font31: 1.722em; /* 31px - default */
+$font60: 3.333em; /* 60px - default */
 $fontH1-front:2.222em; /* 40px - default */
 $fontH1:2.500em; /* 45px - default */
 $fontH1-blog-header:2.667em; /* 48px - default */
 $fontH2-22:1.222em;/* 22px - default */
 $fontH2-25:1.389em;/* 25px - default */
 $fontIntro:1.278em;/* 23px - default */
+$fontHuge:10.222em;/* 184px - default */
 
 /* image path*/
 $imgRoot:'/sites/all/themes/rs_201407/images';
@@ -24,6 +26,8 @@ $colour-blue-darker:#0049b9; /* helpful form button */
 $colour-blue-dark:#224096; /* eg homepage top more blue link */
 $colour-blue-light-1:#d4e4f3; /* useful info form bg */
 $colour-blue-light-2:#dee3ef; /* general content BG */
+$colour-blue-light-pastel:#adcbe8; /* search box bg */
+$colour-blue-light-pastel2:#a3c5e9; /* 404 title */
 $colour-blue-dark-blog:#0069af; /* blog header */
 $colour-blue-dark-blog-more:#0036a0; /* blog more link BG*/
 $colour-blue-light-blog:#b8d1e3; /* blog footer */

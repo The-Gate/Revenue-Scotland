@@ -49,3 +49,8 @@ $grid-12:1180px;
   width:33%;
   width:calc((100% - 60px) / 3);
 }
+
+/*search*/
+.ui-theme-rs.ui-autocomplete-input {
+  width:$grid-3 - 45;
+}

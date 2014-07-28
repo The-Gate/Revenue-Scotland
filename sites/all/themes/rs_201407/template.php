@@ -72,3 +72,18 @@ function rs_201407_field__field_title__field_publication($variables) {
 
   return $output;
 }
+
+
+function rs_201407_form_alter(&$form, $form_state, $form_id) {
+  if ($form_id == 'views_exposed_form') {
+    $view = $form_state['view'];
+    if ($view->name == 'site_search') {
+      $form['keys']['#attributes']['placeholder'] = t('Search');
+      $form['submit'] = array(
+        '#type' => 'image_button',
+        '#value' => t('Search'),
+        '#src' => drupal_get_path('theme', 'rs_201407') . '/images/button_search.png',
+      );
+    }
+  }
+}

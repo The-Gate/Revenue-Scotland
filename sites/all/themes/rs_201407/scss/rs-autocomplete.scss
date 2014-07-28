@@ -1,3 +1,4 @@
+@import 'base';
 /* AUTOCOMPLETE */
 .ui-theme-rs.ui-autocomplete {
   position: absolute;
@@ -6,15 +7,16 @@
 * html .ui-theme-rs.ui-autocomplete {
   width: 1px; /* without this, the menu expands to 100% in IE6 */
 }
-.ui-theme-rs.ui-autocomplete-input {
-  background-image: url("images/throbber.gif");
-  background-position: 100% 4px;
+.ui-theme-rs.ui-autocomplete-input, .ui-theme-rs.ui-autocomplete-loading {
+  background-position: 100% 50%;
   background-repeat: no-repeat;
 }
+
+.ui-theme-rs.ui-autocomplete-input {
+  background-image: url('#{$imgRoot}/throbber-inactive.png');
+}
 .ui-theme-rs.ui-autocomplete-loading {
-  background-image: url("images/throbber.gif");
-  background-position: 100% -16px;
-  background-repeat: no-repeat;
+  background-image: url('#{$imgRoot}/throbber-active.gif');
 }
 
 .ui-theme-rs.ui-widget-content {
@@ -39,7 +41,6 @@
   margin: 0;
   display: block;
   float: left;
-  min-width: 350px;
 }
 #ui-theme-rs.ui-menu .ui-menu {
   margin-top: -3px;

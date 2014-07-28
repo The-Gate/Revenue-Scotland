@@ -1,3 +1,39 @@
+/* font sizes */
+/* 14px - default */
+/* 16px - default */
+/* 30px - default */
+/* 31px - default */
+/* 60px - default */
+/* 40px - default */
+/* 45px - default */
+/* 48px - default */
+/* 22px - default */
+/* 25px - default */
+/* 23px - default */
+/* 184px - default */
+/* image path*/
+/* colours... hmmm not sure about the variable names! :( */
+/* eg footer BG */
+/* eg top menu border */
+/* eg homepage central blue bg */
+/* helpful form button */
+/* eg homepage top more blue link */
+/* useful info form bg */
+/* general content BG */
+/* search box bg */
+/* 404 title */
+/* blog header */
+/* blog more link BG*/
+/* blog footer */
+/* download file link */
+/* eg home top right block */
+/*eg home page postscript title underline */
+/* eg homepage bottom section */
+/* eg news listings title underlines */
+/* land & building tax */
+/* land & building tax */
+/* landfill tax */
+/* mixins */
 /* AUTOCOMPLETE */
 .ui-theme-rs.ui-autocomplete {
   position: absolute;
@@ -9,16 +45,17 @@
   /* without this, the menu expands to 100% in IE6 */
 }
 
-.ui-theme-rs.ui-autocomplete-input {
-  background-image: url("images/throbber.gif");
-  background-position: 100% 4px;
+.ui-theme-rs.ui-autocomplete-input, .ui-theme-rs.ui-autocomplete-loading {
+  background-position: 100% 50%;
   background-repeat: no-repeat;
 }
 
+.ui-theme-rs.ui-autocomplete-input {
+  background-image: url("/sites/all/themes/rs_201407/images/throbber-inactive.png");
+}
+
 .ui-theme-rs.ui-autocomplete-loading {
-  background-image: url("images/throbber.gif");
-  background-position: 100% -16px;
-  background-repeat: no-repeat;
+  background-image: url("/sites/all/themes/rs_201407/images/throbber-active.gif");
 }
 
 .ui-theme-rs.ui-widget-content {
@@ -44,7 +81,6 @@
   margin: 0;
   display: block;
   float: left;
-  min-width: 350px;
 }
 
 #ui-theme-rs.ui-menu .ui-menu {
