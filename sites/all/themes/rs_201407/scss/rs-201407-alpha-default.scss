@@ -1,1 +1,9 @@
 /* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
+
+.sf-menu-tax-main-menu{
+  &.sf-depth-1{
+    & > a{
+      width:90%;
+    }
+  }
+}

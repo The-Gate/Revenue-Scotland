@@ -6,4 +6,5 @@ function rs_201407_alpha_preprocess_node(&$vars) {
     drupal_add_js(drupal_get_path('theme', 'rs_201407') . '/js/category_overview.js');
   }
 }
+
 ?>

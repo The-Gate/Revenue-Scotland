@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAII,mCAAK,CACH,KAAK,CAAC,GAAG",
+"sources": ["../scss/rs-201407-alpha-default.scss"],
 "file": "rs-201407-alpha-default.css"
 }

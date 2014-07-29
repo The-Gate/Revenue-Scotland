@@ -28,6 +28,9 @@ a:link, a:visited{
   text-decoration: none;
   color:$colour-black-almost;
 }
+.logo-img{
+  padding-top:50px;
+}
 /* menu */
 /* top menu */
 .region-user-first {
@@ -47,7 +50,79 @@ a:link, a:visited{
   }
 }
 /* main menu */
-
+.region-menu{
+  padding-top:3px;
+}
+.sf-menu-tax-main-menu{
+  font-size:$font21;
+  font-weight:700;
+  li{
+    &#menu-616-1{
+      background:url('#{$imgRoot}/t-m-r.png') no-repeat 100% 0;
+      & > a:hover{
+        border-bottom:$colour-red-dark 5px solid;
+      }
+      & > ul{
+        border-top-color:$colour-red-dark;
+        border-bottom-color:$colour-red-dark;
+        & > li{
+          border-bottom-color:$colour-red-light;
+        }
+      }
+    }
+    &#menu-617-1{
+      background:url('#{$imgRoot}/t-m-g.png') no-repeat 100% 0;
+      & > a:hover{
+        border-bottom:$colour-green-dark 5px solid;
+      }
+      & > ul{
+        border-top-color:$colour-green-dark;
+        border-bottom-color:$colour-green-dark;
+        & > li{
+          border-bottom-color:$colour-green-light;
+        }
+      }
+    }
+    &.sf-depth-1{
+      width:44%;
+      padding-right:25px;
+      text-align:center;
+      & > a{
+        display:inline-block;
+        height:42px;
+        padding-bottom:15px;
+        &:hover{
+          padding-bottom:10px;
+        }
+      }
+      & > ul{
+        background:#fff;
+        margin-top:4px;
+        border-top-width:5px;
+        border-top-style: solid;
+        border-bottom-width:5px;
+        border-bottom-style: solid;
+        text-align:left;
+        & > li{
+          display:inline-block;
+          border-bottom-width:5px;
+          border-bottom-style: solid;
+          margin-right:16px;
+          &:nth-child(3n){
+            margin-right:0;
+          }
+          &:last-child{
+            margin-bottom:60px;
+          }
+          & > a{
+            padding:25px 0;
+            height:42px;
+          }
+        }
+      }
+    }
+  }
+}
 
 /* search */
 .block--exp-site-search-page {
@@ -76,6 +151,74 @@ a:link, a:visited{
     }
   }
 }
+.context-site-search-results {
+  .view-site-search{
+    text-align: center;
+  }
+  .view-content{ 
+    text-align: left;
+    h3{
+      background:url('#{$imgRoot}/sr-t-r-b.gif') $colour-blue-light-2 100% 50% no-repeat;
+      padding:0 28px;
+      line-height:64px;
+      font-size:$font30;
+    }
+    .views-field-title{
+      font-weight: 700;
+      font-size: $fontH2-25;
+      &:after{ @include partial-title-border($colour-blue-light-2); }
+    }
+    .views-field-body{
+      margin:15px 0 50px;
+      font-size:$font21;
+    }
+  }
+  .item-list{
+    padding-left:100px;
+    text-align: center;
+    background:url('#{$imgRoot}/sr-p-l.gif') $colour-blue-light-2 0 50% no-repeat;
+    display:inline-block;
+    margin:0 auto;
+    vertical-align:middle;
+    .pager-title{
+      line-height:53px;
+      font-weight:700;
+    }
+  }
+  .pager{
+    vertical-align:middle;
+    padding-right:100px;
+    background:url('#{$imgRoot}/sr-p-r.gif') $colour-blue-light-2 100% 50% no-repeat;
+    border: none;
+    border-color: none;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    display:inline-block;
+    .pager-first,.pager-previous,.pager-next,.pager-last{
+      display: none;
+    }
+    li{
+      padding:0;
+      margin:0;
+      vertical-align:middle;
+      line-height:53px;
+      border:none;
+      a{
+        background:none;
+        border:none;
+        font-size: $fontH2-25;
+        text-decoration: underline;
+      }
+      &.pager-current{
+        background:none;
+        color: $colour-blue-dark;
+        font-size: $fontH2-25;
+        padding: 4px 8px;
+      }
+    }
+  }
+}
 /* breadcumbs */
 #breadcrumb{
   margin-top:20px;
@@ -96,7 +239,13 @@ a:link, a:visited{
 }
 /* home specific */
 .front {
-  h1{font-size:$fontH1-front;}
+  .zone-menu-wrapper{
+    border-bottom:#ebebeb 5px solid;
+    margin-bottom:25px;
+  }
+  h1{
+    font-size:$fontH1-front;
+  }
   & .zone-preface-wrapper{
     background: url('#{$imgRoot}/mc-blue-top-home.png') $colour-blue-mid no-repeat 50% 0;
     padding-top:180px;
@@ -190,10 +339,19 @@ a:link, a:visited{
       margin-bottom:80px;
     }
   }
-  h1{
+  h1,h2.search-results-title{
     margin-bottom:12px;
   }
-  .block-field-introduction{
+  .block-block-15{
+    h1 {
+      margin-bottom:4px;
+    }
+    padding-bottom:25px;
+  }
+  h2.search-results-title{
+    font-size:$font30;
+  }
+  .block-field-introduction,.block-block-15{
     margin:0 0 0 110px;
     font-size:$fontIntro;
   }
@@ -221,6 +379,18 @@ a:link, a:visited{
 }
 /* Land & Building Transaction Tax  */
 .context-land-buildings-transaction-tax {
+  .sf-menu-tax-main-menu {
+    li{
+      &#menu-616-1{
+        width:100%;
+        background: none;
+        padding:0;
+      }
+      &#menu-617-1{
+        display:none;
+      } 
+    }
+  }
   .zone-preface-wrapper{
     padding-top:45px;
     border-top:$colour-red-dark 35px solid;
@@ -258,6 +428,18 @@ a:link, a:visited{
 }
 /* scottish landfill tax */
 .context-scottish-landfill-tax {
+  .sf-menu-tax-main-menu {
+    li{
+      &#menu-616-1{
+        display:none;
+      }
+      &#menu-617-1{
+        width:100%;
+        background: none;
+        padding:0;
+      } 
+    }
+  }
   .zone-preface-wrapper{
     padding-top:80px;
     background: url('#{$imgRoot}/mc-g-t.png') 50% 0 no-repeat;

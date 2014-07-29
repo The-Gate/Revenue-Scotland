@@ -23,14 +23,14 @@ $grid-12:940px;
     width:$grid-3;
   }
   li:nth-child(3n){
-       width:$grid-2;
+    width:$grid-2;
   }
 }
 .block-client-block-26{
- width:$grid-6;
+  width:$grid-6;
 }
 #messages.helpful_frm{
- width:$grid-5;
+  width:$grid-5;
 }
 
 .view-id-events{
@@ -44,7 +44,7 @@ $grid-12:940px;
 .blog-home{
   .zone-preface-wrapper{
     .field-name-field-introduction{
-    width:$grid-8;
+      width:$grid-8;
     }
   }
 }
@@ -57,4 +57,30 @@ $grid-12:940px;
 /*search*/
 .ui-theme-rs.ui-autocomplete-input {
   width:$grid-3 - 45;
+}
+
+
+/* main menu */
+.sf-menu-tax-main-menu{
+  font-size:$font21;
+  & .sf-depth-1 > ul{
+    width:$grid-12;
+    margin-top:4px !important;
+    & li {
+      width:$grid-4;
+    }
+  }
+  & #menu-616-1 > ul{
+    left:-240px;
+  }
+  & #menu-617-1 > ul{
+    left:-458px;
+  }
+}
+.context-scottish-landfill-tax {
+  .sf-menu-tax-main-menu{
+    & #menu-617-1 > ul{
+      left:-240px;
+    }
+  }
 }

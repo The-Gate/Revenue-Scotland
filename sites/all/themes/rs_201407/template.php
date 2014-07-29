@@ -10,7 +10,6 @@
  * for your subtheme grows. Please read the README.txt in the /preprocess and /process subfolders
  * for more information on this topic.
  */
-
 function rs_201407_preprocess_html(&$vars) {
 // this did not load if in the preprocess-html file!!
 //  drupal_add_css(path_to_theme() . '/css/acc-201406-ie7.css', array(
@@ -44,6 +43,7 @@ function rs_201407_preprocess_html(&$vars) {
   $vars['rdf']->namespaces = ' xmlns="http://www.w3.org/1999/xhtml" prefix="' . $prefix . '"';
   $vars['rdf']->profile = '';
 }
+
 /**
  * theme_field()
  * 
@@ -73,7 +73,6 @@ function rs_201407_field__field_title__field_publication($variables) {
   return $output;
 }
 
-
 function rs_201407_form_alter(&$form, $form_state, $form_id) {
   if ($form_id == 'views_exposed_form') {
     $view = $form_state['view'];
@@ -85,5 +84,13 @@ function rs_201407_form_alter(&$form, $form_state, $form_id) {
         '#src' => drupal_get_path('theme', 'rs_201407') . '/images/button_search.png',
       );
     }
+  }
+}
+
+function rs_201407_preprocess_views_view(&$variables) {
+// Add title for page views
+  // change view titles to h5
+  if ($variables['view']->name == 'site_search') {
+    drupal_add_js(drupal_get_path('theme', 'rs_201407') . '/js/search_results.js');
   }
 }
