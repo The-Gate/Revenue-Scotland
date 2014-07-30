@@ -425,6 +425,9 @@ a:link, a:visited{
       }
     }
   }
+  .footnotes{
+    border-top-color: $colour-red-light;
+  }
 }
 /* scottish landfill tax */
 .context-scottish-landfill-tax {
@@ -472,6 +475,9 @@ a:link, a:visited{
       }
     }
   }
+  .footnotes{
+    border-top-color: $colour-green-light;
+  }
 }
 /* general content */
 .context-who-we-are,.context-legislation,.context-news,.context-help,.context-compliance-dispute-resolution,.default-theme{
@@ -506,6 +512,9 @@ a:link, a:visited{
       }
     }
   }
+  .footnotes{
+    border-top-color:$colour-blue-light-2;
+  }
 }
 
 .modified-theme {
@@ -530,6 +539,9 @@ a:link, a:visited{
         line-height:60px;
       }
     } 
+  }
+  .footnotes{
+    border-top-color:$colour-blue-light-2;
   }
 }
 /* a-z menu listing */
@@ -636,6 +648,9 @@ a:link, a:visited{
       margin-bottom:40px;
     }
   }
+  .footnotes{
+    border-top-color:$colour-blue-light-2;
+  }
 }
 .blog-home{
   .zone-preface-wrapper{
@@ -711,6 +726,70 @@ a:link, a:visited{
   .field-collection-view{
     margin:0 0 50px;
   }
+}
+/* footnotes */
+.footnotes{
+  border-top-width: 10px;
+  border-top-style: solid;
+  padding-top:40px;    
+}
+a.see-footnote{
+  color: $colour-blue-dark-blog;
+  font-weight:700;
+}
+.see-footnote:before{
+  content:'[';
+  display:inline;
+  font-weight: 400;
+}
+.see-footnote:after {
+  content:']';
+  display:inline;
+  font-weight: 400;
+}
+
+#tooltip {
+  text-align: left;
+  color: $colour-black-almost;
+  background: $colour-tooltip-bg;
+  border:4px solid $colour-tooltip-border;
+  position: absolute;
+  z-index: 100;
+  padding: 15px;
+  -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+
+#tooltip:after /* triangle decoration */ {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid $colour-tooltip-border;
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  margin-left: -10px;
+}
+
+#tooltip.top:after {
+  border-top-color: transparent;
+  border-bottom: 10px solid $colour-tooltip-border;
+  top: -20px;
+  bottom: auto;
+}
+
+#tooltip.left:after {
+  left: 10px;
+  margin: 0;
+}
+
+#tooltip.right:after{
+  right: 10px;
+  left: auto;
+  margin: 0;
 }
 
 /* useful info form */
