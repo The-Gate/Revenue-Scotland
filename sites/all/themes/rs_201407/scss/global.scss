@@ -246,6 +246,16 @@ a:link, a:visited{
   h1{
     font-size:$fontH1-front;
   }
+  .region-preface-third-inner{
+    h3{
+      margin-bottom:0; 
+    }
+    h6{
+      font-weight:400;
+      margin-bottom:0;
+    }    
+  }
+
   & .zone-preface-wrapper{
     background: url('#{$imgRoot}/mc-blue-top-home.png') $colour-blue-mid no-repeat 50% 0;
     padding-top:180px;
@@ -313,11 +323,12 @@ a:link, a:visited{
     background:url('#{$imgRoot}/arrow-dark-lilac-on-white-down.png') $colour-lilac-dark 50% 100% no-repeat;
     background-size: 100% 21px;
     padding-bottom:21px;
+    color:#fff;
     h2{
-      color:#fff;
       border-bottom:11px solid #fff;
       display:inline-block;
       padding-right:0 !important;
+      padding-bottom:10px !important;
     }
   }
 }
@@ -428,6 +439,13 @@ a:link, a:visited{
   .footnotes{
     border-top-color: $colour-red-light;
   }
+  /* title under line */
+  h1,h2,h3,h4,h5,h6{
+    &.heading-underline:after{
+      background: $colour-red-light;
+
+    }
+  }
 }
 /* scottish landfill tax */
 .context-scottish-landfill-tax {
@@ -477,6 +495,13 @@ a:link, a:visited{
   }
   .footnotes{
     border-top-color: $colour-green-light;
+  }  
+  /* title under line */
+  h1,h2,h3,h4,h5,h6{
+    &.heading-underline:after{
+      background: $colour-green-light;
+
+    }
   }
 }
 /* general content */
@@ -515,6 +540,13 @@ a:link, a:visited{
   .footnotes{
     border-top-color:$colour-blue-light-2;
   }
+  /* title under line */
+  h1,h2,h3,h4,h5,h6{
+    &.heading-underline:after{
+      background: $colour-blue-dark-blog-more;
+
+    }
+  }
 }
 
 .modified-theme {
@@ -542,6 +574,13 @@ a:link, a:visited{
   }
   .footnotes{
     border-top-color:$colour-blue-light-2;
+  }
+  /* title under line */
+  h1,h2,h3,h4,h5,h6{
+    &.heading-underline:after{
+      background: $colour-blue-dark-blog-more;
+
+    }
   }
 }
 /* a-z menu listing */
@@ -651,6 +690,13 @@ a:link, a:visited{
   .footnotes{
     border-top-color:$colour-blue-light-2;
   }
+  /* title under line */
+  h1,h2,h3,h4,h5,h6{
+    &.heading-underline:after{
+      background: $colour-blue-dark-blog-more ;
+
+    }
+  }
 }
 .blog-home{
   .zone-preface-wrapper{
@@ -728,10 +774,23 @@ a:link, a:visited{
   }
 }
 /* footnotes */
-.footnotes{
+ul.footnotes{
   border-top-width: 10px;
   border-top-style: solid;
-  padding-top:40px;    
+  padding-top:40px;
+  .footnote-label{
+    font-weight:700;
+  }
+  li{
+    margin-bottom:25px;
+    margin-left:0;
+    a.footnote-return{
+      text-decoration: underline;
+      color: $colour-blue-dark-link;
+      font-weight:700;
+    }
+  }
+
 }
 a.see-footnote{
   color: $colour-blue-dark-blog;
@@ -747,7 +806,6 @@ a.see-footnote{
   display:inline;
   font-weight: 400;
 }
-
 #tooltip {
   text-align: left;
   color: $colour-black-almost;
@@ -757,8 +815,8 @@ a.see-footnote{
   z-index: 100;
   padding: 15px;
   -webkit-border-radius: 5px;
--moz-border-radius: 5px;
-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 #tooltip:after /* triangle decoration */ {
@@ -790,6 +848,51 @@ border-radius: 5px;
   right: 10px;
   left: auto;
   margin: 0;
+}
+/* CKEditor */
+/* paragraph highlights */
+.highlight-general{
+  padding:15px 15px 45px;
+  background:url('#{$imgRoot}/mc-b-tb.png') $colour-blue-light-2 50% 100% no-repeat;
+}
+.highlight-red{
+  padding:15px 100px 15px 15px;
+  background:url('#{$imgRoot}/icon-warning.png') $colour-red-para-hilite 95% 15px no-repeat;
+  min-height:70px;
+}
+.highlight-green{
+  padding:15px 100px 15px 15px;
+  background:url('#{$imgRoot}/icon-success.png') $colour-green-para-hilite 95% 15px  no-repeat;
+  min-height:70px;
+}
+/* title under line */
+h1,h2,h3,h4,h5,h6{
+  &.heading-underline:after{
+    height: 10px;
+    width: 95px;
+    display: block;
+    margin-top: 15px;
+    content: "";
+  }
+}
+/* paragraph underline */
+.paragraph-underline:after{
+  height: 10px;
+  width: 85%;
+  display: block;
+  margin-top: 15px;
+  content: "";
+  background: $colour-blue-mid;
+  margin-left:-15px;
+}
+/* link underline & arrow */
+.link-underline{
+  border-bottom: 10px solid $colour-blue-mid;
+  display: inline-block;
+  padding:0 !important;
+  a{
+    padding-left:15px;
+  }
 }
 
 /* useful info form */

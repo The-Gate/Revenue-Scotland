@@ -12,6 +12,7 @@
  */
 function rs_201407_preprocess_html(&$vars) {
     drupal_add_js(drupal_get_path('theme', 'rs_201407') . '/js/tooltip.js');
+    drupal_add_js(drupal_get_path('theme', 'rs_201407') . '/js/footnotes.js');
 // this did not load if in the preprocess-html file!!
 //  drupal_add_css(path_to_theme() . '/css/acc-201406-ie7.css', array(
 //    'type' => 'file',
