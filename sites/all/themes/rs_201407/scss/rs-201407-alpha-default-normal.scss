@@ -55,7 +55,8 @@ $grid-12:940px;
   width:calc((100% - 60px) / 3);
 }
 /*search*/
-.ui-theme-rs.ui-autocomplete-input {
+.block--exp-site-search-page .views-exposed-form .views-exposed-widget .form-type-textfield input[type="text"],
+.block--exp-site-search-page-1 .views-exposed-form .views-exposed-widget .form-type-textfield input[type="text"] {
   width:$grid-3 - 45;
 }
 
@@ -71,10 +72,10 @@ $grid-12:940px;
     }
   }
   & #menu-616-1 > ul{
-    left:-240px;
+    left:-250px;
   }
   & #menu-617-1 > ul{
-    left:-458px;
+    left:-468px;
   }
 }
 .context-scottish-landfill-tax {
@@ -82,5 +83,22 @@ $grid-12:940px;
     & #menu-617-1 > ul{
       left:-240px;
     }
+  }
+}
+
+.block-webform-client-block-26 {
+  .webform-component-radios{ 
+    & > label{
+      line-height:45px;
+    }
+  }
+}
+
+.field-name-field-file-upload .field-item a{
+  line-height:28px;
+}
+.context-contact-us{
+  .webform-client-form{
+    width:$grid-8;
   }
 }

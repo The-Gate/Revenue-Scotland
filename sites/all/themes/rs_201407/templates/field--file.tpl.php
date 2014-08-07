@@ -52,7 +52,7 @@
     foreach ($items as $delta => $item):
       $link = $item['#markup'];
       $path_parts = pathinfo($link);
-      $item['#markup'] = '<div class="file-wrapper"><a href="' . $link . '">Download <span class="ext">' . strtolower($path_parts['extension']) . '</span></a></div>';
+      $item['#markup'] = '<div class="file-wrapper"><a href="' . $link . '" target="_blank" title="File ['.$path_parts['basename'].'] will open in a new window">Download <span class="ext">' . strtolower($path_parts['extension']) . '</span></a></div>';
       ?>
 
       <div class="field-item <?php print $delta % 2 ? 'odd' : 'even'; ?>"<?php print $item_attributes[$delta]; ?>><?php print render($item); ?></div>

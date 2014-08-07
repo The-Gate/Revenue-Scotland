@@ -56,6 +56,7 @@ function _get_menu_children_data() {
     foreach ($child_items as $depth => $item) {
       if (isset($item->body['und'])){
       $description = !(empty($item->body['und'][0]['summary'])) ? $item->body['und'][0]['summary'] : $item->body['und'][0]['safe_value'];
+      $description = check_markup($description, 'basic_html');
       } else {
         $description = '';
       }

@@ -3,6 +3,7 @@ $basefont:18px;
 $reducedfont:17px;
 $font14:0.778em; /* 14px - default */
 $font16:0.889em; /* 16px - default */
+$font20: 1.111em; /* 20px - default */
 $font21: 1.167em; /* 21px - default */
 $font30: 1.667em; /* 30px - default */
 $font31: 1.722em; /* 31px - default */
@@ -33,6 +34,8 @@ $colour-blue-dark-blog:#0069af; /* blog header */
 $colour-blue-dark-blog-more:#0036a0; /* blog more link BG*/
 $colour-blue-light-blog:#b8d1e3; /* blog footer */
 $colour-blue-dark-link:#1a54a6; /* download file link */
+$colour-blue-form-border:#0048ad; /* contact us form border */
+$colour-blue-form-border-light:#4d7fc6; /* contact us form border */
 $colour-lilac-dark:#a77bd4; /* eg home top right block */
 $colour-lilac-mid:#dac9ee; /*eg home page postscript title underline */
 $colour-lilac:#f0e9f8; /* eg homepage bottom section */
@@ -105,4 +108,17 @@ $padding-contentBlock: 0 20px 0 15px;
   font-size:$font16;
   line-height:31px;
   background: url('#{$imgRoot}/more-p.gif') 100% 50% no-repeat;   
+}
+
+@mixin submit-button(){
+  -webkit-appearance: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background:  $colour-blue-form-border;
+  border: 1px solid;
+  border-color:$colour-blue-form-border-light #000 #000  $colour-blue-form-border-light;
+  cursor: pointer;
+  color: #FFF;
+  text-shadow: none;
 }

@@ -51,7 +51,8 @@ $grid-12:1180px;
 }
 
 /*search*/
-.ui-theme-rs.ui-autocomplete-input {
+.block--exp-site-search-page .views-exposed-form .views-exposed-widget .form-type-textfield input[type="text"],
+.block--exp-site-search-page-1 .views-exposed-form .views-exposed-widget .form-type-textfield input[type="text"] {
   width:$grid-3 - 45;
 }
 
@@ -69,10 +70,10 @@ $grid-12:1180px;
     }
   }
   & #menu-616-1 > ul{
-    left:-300px;
+    left:-310px;
   }
   & #menu-617-1 > ul{
-    left:-569px;
+    left:-578px;
   }
 }
 
@@ -81,5 +82,12 @@ $grid-12:1180px;
     & #menu-617-1 > ul{
       left:-300px;
     }
+  }
+}
+
+
+.context-contact-us{
+  .webform-client-form{
+    width:$grid-8;
   }
 }

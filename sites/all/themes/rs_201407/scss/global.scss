@@ -29,15 +29,17 @@ a:link, a:visited{
   color:$colour-black-almost;
 }
 .logo-img{
-  padding-top:50px;
+  padding-top:30px;
 }
 /* menu */
 /* top menu */
 .region-user-first {
   margin-bottom:45px;
-  ul {
-    text-align:right;
-    li.leaf{
+  ul.menu {
+    position:absolute;
+    right:0;
+    li{
+      margin:0;
       display: inline-block;
       font-family:$calibri-font;
       font-weight: 700;
@@ -63,6 +65,7 @@ a:link, a:visited{
         border-bottom:$colour-red-dark 5px solid;
       }
       & > ul{
+        padding:0 10px;
         border-top-color:$colour-red-dark;
         border-bottom-color:$colour-red-dark;
         & > li{
@@ -76,6 +79,7 @@ a:link, a:visited{
         border-bottom:$colour-green-dark 5px solid;
       }
       & > ul{
+        padding:0 10px;
         border-top-color:$colour-green-dark;
         border-bottom-color:$colour-green-dark;
         & > li{
@@ -569,15 +573,17 @@ a:link, a:visited{
     background: url('#{$imgRoot}/mc-b-tb-mod.png') 100% 100% no-repeat $colour-blue-light-2;
   }
   &.context-help{
-    .block-page-title{
-      background: url('#{$imgRoot}/mc-b-tb-mod.png') 100% 0 no-repeat $colour-blue-light-2;
-      background-size:auto auto;
-      margin-bottom:70px;
-      h1{
-        font-size:$font30;
-        padding:0 20px;
-        margin:0;
-        line-height:60px;
+    .region-content{
+      .block-page-title{
+        background: url('#{$imgRoot}/mc-b-tb-mod.png') 100% 0 no-repeat $colour-blue-light-2;
+        background-size:auto auto;
+        margin-bottom:70px;
+        h1{
+          font-size:$font30;
+          padding:0 20px;
+          margin:0;
+          line-height:60px;
+        }
       }
     } 
   }
@@ -924,12 +930,13 @@ h1,h2,h3,h4,h5,h6{
 .block-webform-client-block-26 {
   background: $colour-blue-light-1;
   padding:12px 25px 0 ;
+  margin-bottom:30px;
   .webform-component-radios{ 
     margin-top:0;
     & > label{
       line-height:46px;
       background: url('#{$imgRoot}/icon-form-closed.gif') 100% 50% no-repeat;
-      width:100%;
+      padding-right:50px;
       &.open{
         background: url('#{$imgRoot}/icon-form-open.gif') 100% 50% no-repeat;
       }
@@ -969,18 +976,8 @@ h1,h2,h3,h4,h5,h6{
     text-align: right;
   }
   button, input[type="reset"], input[type="submit"], input[type="button"]{
-    -webkit-appearance: none;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    background: #0049b9;
-    border: 1px solid;
-    border-color: #4d80ce #000 #000 #4d80ce;
-    cursor: pointer;
-    color: #FFF;
-    text-shadow: none;
+    @include submit-button();
   }
-
 }
 #messages.helpful_frm{
   font-weight:700;
@@ -990,6 +987,17 @@ h1,h2,h3,h4,h5,h6{
     border-left:5px solid $colour-blue-light-1;
     padding: 0 15px;
     margin: 15px 25px;
+  }
+}
+/* contact form */
+.node-type-webform{
+  input[type="text"],input[type="email"],textarea{
+    border-color:$colour-blue-form-border;
+    width:100%;
+  }
+  input[type="submit"]{
+    @include submit-button();
+    float:right;
   }
 }
 /* footer */
@@ -1050,5 +1058,138 @@ h1,h2,h3,h4,h5,h6{
       }
     }
   }
+}
+/* mobile specific */
+@media screen and (max-width: 768px) and (min-width: 1px)  {
+  img{
+    width:100%;
+    height:auto;
+  }
+  .logo-img {
+    padding-top: 5px;
+    margin-right: 0;
+    img{
+      display:block;
+      height:50px;
+      width:auto; 
+    }
+  }
+  .region-branding,.region-user-first,.region-menu{
+    margin-bottom:10px;
+  }
+  #superfish-1-select,#superfish-2-select{
+    width:100%;
+  }
+  /*search*/
+  .region-user-second{
+    .views-exposed-form .views-exposed-widget{
+      width:calc(100% - 45px);
+    }
+    .views-exposed-widget.views-submit-button{
+      width:45px;
+    }
+  }
+  .block--exp-site-search-page .views-exposed-form .views-exposed-widget .form-type-textfield input[type="text"],
+  .block--exp-site-search-page-1 .views-exposed-form .views-exposed-widget .form-type-textfield input[type="text"] {
+    width:100%;
+  }
+  /* content header area */
+  .context-land-buildings-transaction-tax {
+    .zone-preface-wrapper{
+      padding-top:33px;
+    }
+  }
 
+  .context-scottish-landfill-tax {
+    .zone-preface-wrapper{
+      padding-top:63px;
+    }
+  }
+  .modified-theme .zone-preface{
+    padding-bottom:50px;
+    #breadcrumb{
+      padding-top:20px;
+    }
+  }
+  .context-who-we-are,.context-legislation,.context-news,.context-help,.context-compliance-dispute-resolution,.default-theme{
+    .zone-preface-wrapper{
+      padding-top:55px;
+    }
+  }
+  .context-land-buildings-transaction-tax,.context-scottish-landfill-tax,.context-who-we-are,.context-legislation,.context-news,.context-help,.context-compliance-dispute-resolution,.default-theme,.node-type-news {
+    .region-preface-second{
+      .block-block-9,.block-block-10,.block-block-11,.block-block-13,.block-delta-blocks-page-title{
+        margin-left:10px;      
+      }
+      .block-block-9:after,.block-block-10:after,.block-block-11:after,.block-block-13:after,.block-delta-blocks-page-title:after{
+        margin:0;
+      }
+    }
+    .block-field-introduction,.block-block-15{
+      margin:10px 0 0 10px;
+    }
+
+    .block-sub-menu-items {
+      .depth-2,.depth-3{
+        h2{
+          height:auto;
+        }
+      }
+    }
+  }
+
+  .context-blog{
+    .logo-img {
+      margin-bottom:0;
+    }
+    .region-menu{
+      display: none;
+    }
+    .block--exp-site-search-page-1{
+      padding-top:0;
+    }
+  }
+  
+.blog-home{
+  .zone-preface-wrapper{
+
+    .field-name-field-introduction{
+      margin-top:0;
+      padding-top:10px
+    }
+  }
+}
+  .block-sub-menu-items{
+    .grid-4,
+    .grid-4:nth-child(3n+1),
+      .grid-4:nth-child(3n+3){
+      margin:0 0 60px;
+    }
+  }
+  .block-webform-client-block-26 .webform-component-radios>label{
+    line-height:1.2;
+  }
+  .region-content .block-system-main{
+    margin-bottom:10px;
+  }
+  .block-menu-block-2 {
+    margin:0 10px;
+  }
+
+  .field-name-field-file-upload{ 
+    .field-item{
+      margin-bottom:10px;
+    }
+  }
+  .zone-footer{
+    padding:30px 0 50px; 
+    ul.menu {
+      margin-bottom:10px;
+      li,
+      li:nth-child(3n){
+        display:block;
+        margin:5px 15px 0;
+      }  
+    }
+  }
 }

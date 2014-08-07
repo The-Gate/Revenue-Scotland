@@ -52,7 +52,7 @@ function search_autocomplete_autocomplete($fid, $user_input = '') {
   $view = views_get_view($result['data_view']);
   $view->exposed_input['filter'] = $user_input;
   
-  if (method_exists($view, render)) {
+  if (method_exists($view, 'render')) {
     echo $view->render();
   } else {
     echo drupal_json_encode(array());

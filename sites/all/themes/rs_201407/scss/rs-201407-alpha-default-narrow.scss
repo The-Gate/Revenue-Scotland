@@ -21,6 +21,18 @@ $grid-12:700px;
   width:$grid-3;
   height:auto;
 }
+
+/* top menu */
+.region-user-first {
+  ul.menu {
+    margin-right:5px;
+    li{
+      a{
+        padding:5px 10px;
+      }
+    }
+  }
+}
 /* footer */
 .zone-footer{
   li{
@@ -59,13 +71,13 @@ $grid-12:700px;
   width:calc((100% - 60px) / 3);
 }
 /*search*/
-.ui-theme-rs.ui-autocomplete-input {
-  width:$grid-3 - 45;
+.block--exp-site-search-page .views-exposed-form .views-exposed-widget .form-type-textfield input[type="text"],
+.block--exp-site-search-page-1 .views-exposed-form .views-exposed-widget .form-type-textfield input[type="text"] {
+  width:$grid-3 - 50;
 }
 /* main menu */
 .sf-menu-tax-main-menu{
   font-size:$font16;
-
   li.sf-depth-1{
     width:42%;
   }
@@ -77,10 +89,10 @@ $grid-12:700px;
     }
   }
   & #menu-616-1 > ul{
-    left:-180px;
+    left:-190px;
   }
   & #menu-617-1 > ul{
-    left:-347px;
+    left:-357px;
   }
 }
 .context-scottish-landfill-tax {
@@ -88,5 +100,20 @@ $grid-12:700px;
     & #menu-617-1 > ul{
       left:-180px;
     }
+  }
+}
+.block-webform-client-block-26 {
+  .webform-component-radios{ 
+    & > label{
+      line-height:1.2;
+    }
+  }
+}
+.field-name-field-file-upload .field-item a{
+  line-height:1.2;
+}
+.context-contact-us{
+  .webform-client-form{
+    width:$grid-8;
   }
 }

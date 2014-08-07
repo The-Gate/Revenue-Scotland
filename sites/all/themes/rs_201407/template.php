@@ -11,8 +11,8 @@
  * for more information on this topic.
  */
 function rs_201407_preprocess_html(&$vars) {
-    drupal_add_js(drupal_get_path('theme', 'rs_201407') . '/js/tooltip.js');
-    drupal_add_js(drupal_get_path('theme', 'rs_201407') . '/js/footnotes.js');
+  drupal_add_js(drupal_get_path('theme', 'rs_201407') . '/js/tooltip.js');
+  drupal_add_js(drupal_get_path('theme', 'rs_201407') . '/js/footnotes.js');
 // this did not load if in the preprocess-html file!!
 //  drupal_add_css(path_to_theme() . '/css/acc-201406-ie7.css', array(
 //    'type' => 'file',
@@ -76,16 +76,23 @@ function rs_201407_field__field_title__field_publication($variables) {
 }
 
 function rs_201407_form_alter(&$form, $form_state, $form_id) {
-  if ($form_id == 'views_exposed_form') {
-    $view = $form_state['view'];
-    if ($view->name == 'site_search') {
-      $form['keys']['#attributes']['placeholder'] = t('Search');
-      $form['submit'] = array(
-        '#type' => 'image_button',
-        '#value' => t('Search'),
-        '#src' => drupal_get_path('theme', 'rs_201407') . '/images/button_search.png',
-      );
-    }
+  switch ($form_id) {
+    case 'views_exposed_form':
+      $view = $form_state['view'];
+      if ($view->name == 'site_search') {
+        $form['keys']['#attributes']['placeholder'] = t('Search');
+        $form['submit'] = array(
+          '#type' => 'image_button',
+          '#value' => t('Search'),
+          '#src' => drupal_get_path('theme', 'rs_201407') . '/images/button_search.png',
+        );
+      }
+      break;
+    case 'webform_client_form_4':
+      $form['actions']['submit']['#value'] = t('Send');
+      break;
+    default:
+      break;
   }
 }
 

@@ -22,12 +22,10 @@
 .ui-theme-rs.ui-widget-content {
   background: none;
   border-radius: 0px;
-  color: #2c2c2c;
   border: 1px solid #c8c8c8;
   box-shadow: 2px 2px 2px -1px rgba(128,128,128,0.6);
   position: absolute;
   background-color: #FFFFFF;
-  font-family: Arial,Tahoma,"Bitstream Vera Sans",sans-serif;
   font-size: 1em;
 }
 
@@ -37,10 +35,14 @@
 }
 #ui-theme-rs.ui-menu {
   list-style: none;
-  padding: 0px;
+  padding: 10px;
   margin: 0;
   display: block;
   float: left;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+
 }
 #ui-theme-rs.ui-menu .ui-menu {
   margin-top: -3px;
@@ -69,15 +71,15 @@
   background: none;
   border: none;
   border-radius: 0px;
-  background-color: #4f4fff;
+  background-color:$colour-blue-light-pastel;
   color: #FFFFFF;
 }
 #ui-theme-rs .ui-autocomplete-fields {
-  padding: 5px 6px;
+  padding: 5px 6px 20px;
   overflow: hidden;
 }
 #ui-theme-rs .ui-menu-item-first {
-  border-top: 1px solid #a9a9f9;
+  border-top: 5px solid $colour-blue-light-2;
 }
 #ui-theme-rs .ui-autocomplete-field-title {
   text-align: left;
@@ -89,8 +91,13 @@
 #ui-theme-rs .ui-autocomplete-field-group {
   background-position: right top;
   background-repeat: no-repeat;
-  color: #1200db;
-  float: right;
+  color: $colour-black-almost;
+  font-weight: 700;
   position: relative;
-  right: 5px;
+  float: left;
+  padding-bottom:5px;
+}
+.ui-autocomplete-field-group.page{
+  font-size:20px!important;
+  margin-top:0;
 }
