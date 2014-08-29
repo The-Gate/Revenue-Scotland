@@ -33,6 +33,13 @@ $grid-12:700px;
     }
   }
 }
+/* a-z menu listing */
+.menu-block-2 {
+  .menu{
+    margin: 0 auto;
+    width:80%;
+  } 
+}
 /* footer */
 .zone-footer{
   li{
@@ -95,11 +102,27 @@ $grid-12:700px;
     left:-357px;
   }
 }
+
+
+/* Land & Building Transaction Tax  */
+.context-land-buildings-transaction-tax {
+  .zone-preface-wrapper{
+    padding-top:75px;
+    background: url('#{$imgRoot}/mc-r-t_narrow.png') 50% 0 no-repeat;
+    margin-bottom:50px;
+  }
+}
+/* scottish landfill tax */
 .context-scottish-landfill-tax {
   .sf-menu-tax-main-menu{
     & #menu-617-1 > ul{
       left:-180px;
     }
+  }
+  .zone-preface-wrapper{
+    padding-top:75px;
+    background: url('#{$imgRoot}/mc-g-t_narrow.png') 50% 0 no-repeat;
+    margin-bottom:50px;
   }
 }
 .block-webform-client-block-26 {

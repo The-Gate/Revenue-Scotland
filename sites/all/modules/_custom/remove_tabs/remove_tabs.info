@@ -1,0 +1,5 @@
+name = Remove Tabs
+description = Add permissions to view certain menu options. <ul><li>Revision / View Tabs</li></ul>
+package = Revenue Scotland
+core = 7.x
+php = 5.2

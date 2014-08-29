@@ -1,0 +1,272 @@
+@import 'base';
+
+.view-more,
+.region-user-first ul.menu li,
+.sf-menu-tax-main-menu  li.sf-depth-1 a,
+.sf-menu-tax-main-menu  li.sf-depth-1 ul li,
+.context-site-search-results .view-content .item-list,
+.page-blog-search-results .view-content .item-list
+.context-site-search-results .pager, 
+.page-blog-search-results .pager
+.front .field-name-body a,
+.front .zone-postscript .region .block a,
+.front .block-block-5 h2,
+.menu-block-2 .menu li,
+.view-id-events .views-label,
+.view-id-events .field-content,
+.node-type-event .views-label,
+.node-type-event .field-content,
+.link-underline,
+.link-underline a,
+.block-webform-client-block-26  .form-type-radio > *,
+.zone-footer ul.menu li,
+.field-name-field-file-upload .field-item
+{
+  zoom: 1;
+  display: inline;
+}
+.block--exp-site-search-page .views-exposed-form .views-exposed-widget .form-type-textfield input[type="text"], .block--exp-site-search-page-1 .views-exposed-form .views-exposed-widget .form-type-textfield input[type="text"]{
+  position:relative;
+  width:140px;
+  margin:0;
+  top:-1px;
+}
+/* fix main drop down menu z-index problem */
+.zone-menu-wrapper, .zone-menu-wrapper *{
+  z-index:9999;
+}
+.zone-header-wrapper, .zone-header-wrapper *{
+  z-index: 1;
+}
+
+/* home specific */
+.front {
+  & .zone-preface .region {
+    .block-block-2 .content{
+      .link-underline{
+        @include ie7-after-div();
+        & .after{ @include ie7-after-more-info-image('more-r.gif'); }
+      }
+    }
+    .block-block-3 .content{
+      .link-underline{
+        @include ie7-after-div();
+        & .after{ @include ie7-after-more-info-image('more-g.gif'); }
+      }
+    }
+    .block-block-4 .content{
+      .link-underline{
+        @include ie7-after-div();
+        & .after{ @include ie7-after-more-info-image('more-p.gif'); }
+      }
+    }
+  }
+}
+.context-land-buildings-transaction-tax,.context-scottish-landfill-tax,.context-who-we-are,.context-legislation,.context-news,.context-help,.context-compliance-dispute-resolution,.default-theme,.node-type-news {
+  .region-preface-second{
+    .block-block-9,.block-block-10,.block-block-11,.block-block-13,.block-delta-blocks-page-title{
+      @include ie7-after-div();
+      & .after{ 
+        height:10px;
+        background:#fff;
+        width:110px;
+        display:block;
+        margin:0 0 0 -110px;
+      }
+    }
+    .block-block-11:after,.block-block-13:after{
+      margin-bottom:80px;
+    }
+  }
+}
+/* Land & Building Transaction Tax  */
+.context-land-buildings-transaction-tax {
+  .block-sub-menu-items .depth-4 h2{ 
+    @include ie7-after-div();
+    & .after{ @include partial-title-border($colour-red-light); 
+    }
+  }
+  /* title under line */
+  h1,h2,h3,h4,h5,h6{
+    &.heading-underline{
+      @include ie7-after-div();
+      & .after{ @include partial-title-border($colour-red-light); 
+
+      }
+    }
+  }
+  /* tech manuals */
+  .field-collection-view{
+    .field-name-field-title{
+      h2{
+        @include ie7-after-div();
+        & .after{@include partial-title-border($colour-red-light,5px,5px);}
+      }
+    }
+  }
+}
+
+.context-scottish-landfill-tax {
+  .block-sub-menu-items .depth-4 h2{ 
+    @include ie7-after-div();
+    & .after{ @include partial-title-border($colour-green-light); 
+    }
+  }
+  /* title under line */
+  h1,h2,h3,h4,h5,h6{
+    &.heading-underline{
+      @include ie7-after-div();
+      & .after{ @include partial-title-border($colour-green-light); 
+
+      }
+    }
+  }
+  /* tech manuals */
+  .field-collection-view{
+    .field-name-field-title{
+      h2{
+        @include ie7-after-div();
+        & .after{@include partial-title-border($colour-green-light,5px,5px);}
+      }
+    }
+  }
+}
+
+/* general content */
+.context-who-we-are,.context-legislation,.context-news,.context-help,.context-compliance-dispute-resolution,.default-theme{
+  .block-sub-menu-items .depth-4 h2{ 
+    @include ie7-after-div();
+    & .after{ @include partial-title-border($colour-blue-light-2); 
+    }
+  }
+  /* title under line */
+  h1,h2,h3,h4,h5,h6{
+    &.heading-underline{
+      @include ie7-after-div();
+      & .after{ @include partial-title-border($colour-blue-dark-blog-more); 
+
+      }
+    }
+  }
+  /* tech manuals */
+  .field-collection-view{
+    .field-name-field-title{
+      h2{
+        @include ie7-after-div();
+        & .after{@include partial-title-border($colour-blue-dark-link,5px,5px);}
+      }
+    }
+  }
+}
+
+.modified-theme {
+  /* title under line */
+  h1,h2,h3,h4,h5,h6{
+    &.heading-underline{
+      @include ie7-after-div();
+      & .after{ @include partial-title-border($colour-blue-dark-blog-more); 
+
+      }
+    }
+  }
+}
+
+/* news / event / blog home listing */ 
+.block-views-news-item-list-block,.view-display-id-block,.view-id-blog{
+  h2{
+    @include ie7-after-div();
+    & .after{ @include partial-title-border($colour-purple,5px,5px); 
+    }
+
+  }
+}
+
+/* news listing & details */
+.page-node-121,.node-type-news{
+  .block-views-news-item-list-block{
+    h2{
+      @include ie7-after-div();
+      & .after{ @include partial-title-border($colour-purple,5px,5px); 
+      }
+    }
+    .region-preface-third{
+      /* listing heading */
+      h1{
+        @include ie7-after-div();
+        & .after{ @include partial-title-border($colour-purple,5px,5px); 
+        }
+      }
+    }
+  }
+}
+.context-site-search-results,.page-blog-search-results {
+  .view-content{ 
+    .views-field-title{
+      @include ie7-after-div();
+      & .after{ @include partial-title-border($colour-blue-light-2); }
+    }
+  }
+}
+
+/* blog */
+.node-type-blog-article,.page-taxonomy-term.context-blog{
+  .region-preface-third{
+    h1{
+      @include ie7-after-div();
+      & .after{ @include partial-title-border($colour-purple,5px,5px); 
+      }
+    }
+  }
+}
+.breadcrumb {
+  li{
+    *zoom: expression(
+      this.runtimeStyle.zoom="1",
+      this.appendChild(document.createElement("span")).innerHTML="&nbsp;>"
+      );
+  }
+}
+#tooltip{
+  display:none;
+}
+/* title under line */
+h1,h2,h3,h4,h5,h6{
+  &.heading-underline{
+    @include ie7-after-div();
+    & .after{ 
+      height: 10px;
+      width: 95px;
+      display: block;
+      margin-top: 15px;
+    }
+  }
+}
+/* paragraph underline */
+.paragraph-underline{
+  @include ie7-after-div();
+  & .after{ 
+    height: 10px;
+    width: 85%;
+    display: block;
+    margin-top: 15px;
+    background: $colour-blue-mid;
+    margin-left:-15px;
+  }
+}
+/* link underline & arrow */
+.link-underline{
+  & {
+    @include ie7-after-div();
+    & .after{ 
+      content:'';
+      display: inline-block;
+      width:14px;
+      height:31px;
+      margin-left:10px;
+      vertical-align: top;
+    }
+  }
+}
+
+
+

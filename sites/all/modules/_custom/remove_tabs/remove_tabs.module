@@ -1,0 +1,17 @@
+<?php
+
+// $Id: remove_tabs.module
+/**
+ * Implementation of hook_menu_alter().
+ * Remember to clear the menu cache after adding/editing this function.
+ */
+function remove_tabs_menu_alter(&$items) {
+  global $user;
+  print($user);
+  if ($user->uid == 0) {
+    unset($items['node/%node/revisions']);
+    unset($items['node/%node/revisions/view']);
+  }
+}
+
+?>
