@@ -100,7 +100,12 @@ $grid-12:940px;
     }
   }
 }
-
+/* general content */
+.context-who-we-are,.context-legislation,.context-news,.context-help,.context-compliance-dispute-resolution,.default-theme{
+  .zone-preface-wrapper{
+    background: url('#{$imgRoot}/mc-b-t_normal.png') 50% 0 no-repeat;
+  }
+}
 
 .block-webform-client-block-26 {
   .webform-component-radios{ 

@@ -517,7 +517,6 @@ a:link, a:visited{
   .zone-preface-wrapper{
     padding-top:65px;
     border-top:$colour-blue-dark 15px solid;
-    background: url('#{$imgRoot}/mc-b-t.png') 50% 0 no-repeat;
     margin-bottom:50px;
   }
   .zone-preface{
@@ -1074,12 +1073,12 @@ h1,h2,h3,h4,h5,h6{
     }
   }
   .loading.el-loading{
-      margin:10px 0 !important;
-      padding:10px 0 !important;
-      border-top:1px solid red;
-      border-bottom:1px solid red;
-      background:url('#{$imgRoot}/throbber-active.gif')  no-repeat 50% 50%;
-      height:20px;
+    margin:10px 0 !important;
+    padding:10px 0 !important;
+    border-top:1px solid red;
+    border-bottom:1px solid red;
+    background:url('#{$imgRoot}/throbber-active.gif')  no-repeat 50% 50%;
+    height:20px;
   }
 }
 
@@ -1124,17 +1123,14 @@ h1,h2,h3,h4,h5,h6{
     width:100%;
   }
   /* content header area */
-  .context-land-buildings-transaction-tax {
-    .zone-preface-wrapper{
-      padding-top:33px;
+  .context-land-buildings-transaction-tax,
+  .context-scottish-landfill-tax {
+    #breadcrumb{
+      margin-top:0;
+      padding-top:20px;
     }
   }
 
-  .context-scottish-landfill-tax {
-    .zone-preface-wrapper{
-      padding-top:63px;
-    }
-  }
   .modified-theme .zone-preface{
     padding-bottom:50px;
     #breadcrumb{
@@ -1196,9 +1192,7 @@ h1,h2,h3,h4,h5,h6{
       margin:0 0 60px;
     }
   }
-  .block-webform-client-block-26 .webform-component-radios>label{
-    line-height:1.2;
-  }
+
   .region-content .block-system-main{
     margin-bottom:10px;
   }

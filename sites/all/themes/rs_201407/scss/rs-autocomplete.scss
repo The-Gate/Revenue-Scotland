@@ -13,10 +13,10 @@
 }
 
 .ui-theme-rs.ui-autocomplete-input {
-  background-image: url('#{$imgRoot}/throbber-inactive.png');
+ background-image: none;
 }
 .ui-theme-rs.ui-autocomplete-loading {
-  background-image: url('#{$imgRoot}/throbber-active.gif');
+  background-image: none;
 }
 
 .ui-theme-rs.ui-widget-content {
