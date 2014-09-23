@@ -71,6 +71,9 @@ a:link, a:visited{
         border-bottom:$colour-red-dark 5px solid;
         padding-bottom:10px;
       }
+      &.active-trail > a{
+        padding-bottom:8px;
+      }
       & > ul{
         padding:0 10px;
         border-top-color:$colour-red-dark;

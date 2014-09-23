@@ -21,7 +21,7 @@ $grid-12:940px;
   ul.menu {
     li{
       a{
-        font-size:$font1;
+        font-size:$font16;
       }
     }
   }
@@ -75,7 +75,7 @@ $grid-12:940px;
   font-size:$font21;
   & .sf-depth-1 > ul{
     width:$grid-12;
-    margin-top:9px !important;
+    margin-top:4px !important;
     & li {
       width:$grid-4;
     }
@@ -109,7 +109,7 @@ $grid-12:940px;
   }
   .sf-menu-tax-main-menu{
     & #menu-617-1 > ul{
-      left:-240px;
+      left:-250px;
     }
   }
 }
