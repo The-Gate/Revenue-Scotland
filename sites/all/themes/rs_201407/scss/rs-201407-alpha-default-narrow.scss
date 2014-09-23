@@ -29,6 +29,7 @@ $grid-12:700px;
     li{
       a{
         padding:5px 10px;
+        font-size:$font11;
       }
     }
   }
@@ -103,6 +104,11 @@ $grid-12:700px;
   }
 }
 
+.front {
+  & .zone-content-wrapper{
+    background: url('#{$imgRoot}/mc-blue-bottom-home-narrow.png') no-repeat 50% 0;
+  }
+}
 
 /* Land & Building Transaction Tax  */
 .context-land-buildings-transaction-tax {

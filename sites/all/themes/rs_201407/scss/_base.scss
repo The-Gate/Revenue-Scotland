@@ -1,6 +1,7 @@
 /* font sizes */
 $basefont:18px;
 $reducedfont:17px;
+$font11:0.647em; /* 11px - default */
 $font14:0.778em; /* 14px - default */
 $font16:0.889em; /* 16px - default */
 $font20: 1.111em; /* 20px - default */
@@ -98,6 +99,9 @@ $padding-contentBlock: 0 20px 0 15px;
     background: url('#{$imgRoot}/#{$arrow}') 100% 50% no-repeat $bgColour;   
     a{
       color:$linkColour;
+      &:hover{
+        text-decoration: underline;
+      }
     }
   }
 }

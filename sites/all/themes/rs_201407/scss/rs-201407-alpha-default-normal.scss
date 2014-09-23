@@ -16,7 +16,16 @@ $grid-11:860px;
 $grid-12:940px;
 
 .page {font-size:$basefont !important;}
-
+/* top menu */
+.region-user-first {
+  ul.menu {
+    li{
+      a{
+        font-size:$font1;
+      }
+    }
+  }
+}
 /* footer */
 .zone-footer{
   li{
@@ -66,7 +75,7 @@ $grid-12:940px;
   font-size:$font21;
   & .sf-depth-1 > ul{
     width:$grid-12;
-    margin-top:4px !important;
+    margin-top:9px !important;
     & li {
       width:$grid-4;
     }
@@ -78,7 +87,11 @@ $grid-12:940px;
     left:-468px;
   }
 }
-
+.front {
+  & .zone-content-wrapper{
+    background: url('#{$imgRoot}/mc-blue-bottom-home-normal.png') no-repeat 50% 0;
+  }
+}
 /* Land & Building Transaction Tax  */
 .context-land-buildings-transaction-tax {
   .zone-preface-wrapper{
