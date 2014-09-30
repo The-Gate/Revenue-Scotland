@@ -6,6 +6,17 @@ img{
 .logo-img {
   padding-top: 10px;
 }
+
+/* top menu */
+.region-user-first {
+  ul.menu {
+    li{
+      a{
+        font-size:$font11;
+      }
+    }
+  }
+}
 /* main menu */
 .sf-menu-tax-main-menu{
   li{
@@ -26,7 +37,6 @@ img{
 }
 /* category grid listing */
 .block-sub-menu-items{
-
   .grid-4.col-first{
     margin-left:0;
     clear:left;
@@ -44,7 +54,6 @@ img{
   }
 }
 /* blog */
-
 .context-blog{
   .logo-img{
     margin-bottom:20px;

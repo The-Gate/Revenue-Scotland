@@ -40,36 +40,36 @@ function _get_menu_children_data() {
   $nid_array = array();
   $nid_array = _get_menu_children_nids();
   if (!empty($nid_array) and count($nid_array) > 0) {
-    $child_items = node_load_multiple($nid_array);
+    $child_items = node_load_multiple($nid_array, array('status' => 1));
     switch ($sub_menu_item_depth) {
       case 2:
       case 3:
-        $class = "grid-4 depth-".$sub_menu_item_depth;
+        $class = "grid-4 depth-" . $sub_menu_item_depth;
         break;
       case 4:
-        $class = "grid-12 depth-".$sub_menu_item_depth;
+        $class = "grid-12 depth-" . $sub_menu_item_depth;
         break;
       default:
-        $class = "depth-".$sub_menu_item_depth;
+        $class = "depth-" . $sub_menu_item_depth;
         break;
     }
     $col_count = 1;
     foreach ($child_items as $depth => $item) {
-      
-      if (isset($item->body['und'])){
-      $description = !(empty($item->body['und'][0]['summary'])) ? $item->body['und'][0]['summary'] : $item->body['und'][0]['safe_value'];
-      $description = check_markup($description, 'basic_html');
-      } else {
+      if (isset($item->body['und'])) {
+        $description = !(empty($item->body['und'][0]['summary'])) ? $item->body['und'][0]['summary'] : $item->body['und'][0]['safe_value'];
+        $description = check_markup($description, 'basic_html');
+      }
+      else {
         $description = '';
       }
       $output .= '<div class="' . $class;
       if ($col_count % 3 == 1) {
-        $output .=  ' col-first';
+        $output .= ' col-first';
       }
       if ($col_count % 3 == 0) {
-        $output .=  ' col-last';
+        $output .= ' col-last';
       }
-      $output .=  '">';
+      $output .= '">';
       $output .= '<div class="field-title"><h2><a href="/' . drupal_get_path_alias('node/' . $item->nid) . '">' . $item->title . '</a></h2></div>';
       $output .= '<div class="views-field views-field-description"><div class="field-content">' . $description . '</div></div>';
       $output .= '</div>';

@@ -83,12 +83,13 @@ $padding-contentBlock: 0 20px 0 15px;
     }
   }
   .field-items{
-    padding:0 5px;
+    padding:15px 5px 0;
     .field-item{
       margin-top:10px;
     }
   }
   .view-more{
+    float:right;
     display:inline-block;
     margin-top:25px;
     padding:0 22px 0 10px;
@@ -99,9 +100,6 @@ $padding-contentBlock: 0 20px 0 15px;
     background: url('#{$imgRoot}/#{$arrow}') 100% 50% no-repeat $bgColour;   
     a{
       color:$linkColour;
-      &:hover{
-        text-decoration: underline;
-      }
     }
   }
 }

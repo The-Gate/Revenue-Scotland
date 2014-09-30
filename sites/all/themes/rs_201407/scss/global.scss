@@ -27,6 +27,9 @@ li.expanded, li.collapsed, li.leaf{
 a:link, a:visited{
   text-decoration: none;
   color:$colour-black-almost;
+  &:hover{
+    text-decoration:underline;
+  }
 }
 .logo-img{
   padding-top:30px;
@@ -49,8 +52,7 @@ a:link, a:visited{
         padding:5px 21px;
         font-size:$font16;
       }
-      &.active-trail a,
-      a:hover{
+      &.active-trail a{
         text-decoration: underline;
       }
     }
@@ -97,6 +99,9 @@ a:link, a:visited{
           border-bottom-color:$colour-green-light;
         }
       }
+    }
+    & a:hover{
+      text-decoration: none;
     }
     &.sf-depth-1{
       width:44%;
@@ -192,6 +197,9 @@ a:link, a:visited{
       margin:15px 0 50px;
       font-size:$font21;
     }
+    .views-row{
+      padding-left:28px;
+    }
   }
   .item-list{
     padding-left:100px;
@@ -246,6 +254,7 @@ a:link, a:visited{
 .breadcrumb {
   font-size:$font16;
   color: $colour-black-almost;
+  margin-left:0 !important;
   li:after{
     content: ' >';
     display:inline;
@@ -334,7 +343,7 @@ a:link, a:visited{
     min-height: 2.5em;
   }
   & .field-name-body a,
-  & .zone-postscript .region .block a{
+  & .zone-postscript .region .block p > a{
     display: inline-block;
     color:#fff;
     font-weight: 700;
@@ -344,7 +353,7 @@ a:link, a:visited{
     padding:0 55px 0 20px;
     line-height:46px;
   }
-  & .zone-postscript .region .block .content a{
+  & .zone-postscript .region .block .content p:last-child > a{
     background: url('#{$imgRoot}/blue-on-lilac-arrow-right.png') $colour-blue-dark 100% 50% no-repeat;
     padding:0 49px 0 17px;
     line-height:39px;
@@ -359,6 +368,9 @@ a:link, a:visited{
       display:inline-block;
       padding-right:0 !important;
       padding-bottom:10px !important;
+    }
+    a{
+      color: #fff;
     }
   }
 }
@@ -393,7 +405,7 @@ a:link, a:visited{
     font-size:$font30;
   }
   .block-field-introduction,.block-block-15{
-    margin:0 0 0 110px;
+    margin:20px 0 0 110px;
     font-size:$fontIntro;
   }
   .block-sub-menu-items {
@@ -881,6 +893,15 @@ a.see-footnote{
   left: auto;
   margin: 0;
 }
+/* all content */
+.region-content{
+  .content ul{
+    margin-left:2em;
+  }
+  a{
+    color:$colour-blue-dark-blog
+  }
+}
 /* CKEditor */
 /* paragraph highlights */
 .highlight-general{
@@ -1016,12 +1037,12 @@ h1,h2,h3,h4,h5,h6{
   background: url('#{$imgRoot}/footer.png') $colour-grey-dark 0 100% no-repeat;
   background-size: 100% auto;
   font-size: $font16;
-  padding:30px 0 170px;
+  padding:30px 0 90px;
   margin-bottom:20px;
   ul.menu li{
     display:inline-block;
     vertical-align:top;
-    margin:0 15px 0 0;
+    margin:0 15px 10px 0;
   }
   ul.menu li:nth-child(3n){
     margin:0;
@@ -1030,9 +1051,6 @@ h1,h2,h3,h4,h5,h6{
     color:#fff;
     text-decoration:none;
     font-weight:700;
-  }
-  li a:Hover{
-    text-decoration: underline;
   }
 }
 /* error pages */

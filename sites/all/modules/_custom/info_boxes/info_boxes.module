@@ -45,14 +45,15 @@ function _get_menu_parent_data() {
   $nid_array = _get_menu_nids();
   if (!empty($nid_array) and count($nid_array) > 0) {
     $parent_info = _get_parent_information();
-    $child_items = array_splice(node_load_multiple($nid_array, array('sticky' => 1)), 0, 5);
+    $tmp_multi_node = node_load_multiple($nid_array, array('status'=>1,'sticky' => 1));
+    $child_items = array_splice($tmp_multi_node, 0, 5);
     if (!empty($child_items)) {
       if (!empty($parent_info)) {
         $output .= '<div class="block-title-wrapper"><h2 class="block-title">' . $parent_info->link_title . '</h2></div>';
       }
       $output .= '<div class="field-items">';
       foreach ($child_items as $depth => $item) {
-        $output .= '<div class="field-item"><a href="/' . drupal_get_path_alias('node/' . $item->nid) . '">' . $item->title . '</a></div>';
+          $output .= '<div class="field-item"><a href="/' . drupal_get_path_alias('node/' . $item->nid) . '">' . $item->title . '</a></div>';
       }
       $output .= '</div>';
       if (!empty($parent_info)) {
